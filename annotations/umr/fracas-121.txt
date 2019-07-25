@@ -1,0 +1,40 @@
+# ::id fracas-121.premise_0 ::date 2017-03-08T23:09:30
+# ::snt Smith delivered a report to ITEL.
+# ::user timjogorman
+(d / deliver-01
+      :ARG0 (p / person :wiki -
+            :name (n / name :op1 "Smith"))
+      :ARG1 (r / report)
+      :ARG2 (c / company :wiki -
+            :name (n2 / name :op1 "ITEL")))
+
+# ::id fracas-121.premise_1 ::date 2017-03-08T23:09:30
+# ::snt She also delivered them an invoice.
+# ::user timjogorman
+(d / deliver-01
+      :ARG0 (s / she)
+      :ARG1 (i2 / invoice)
+      :mod (a / also))
+
+# ::id fracas-121.premise_2 ::date 2017-03-08T23:09:30
+# ::snt And she delivered them a project proposal.
+# ::user timjogorman
+(d / deliver-01
+      :ARG0 (s / she)
+      :ARG1 (p / propose-01
+            :ARG1 (p2 / project))
+      :ARG2 (t / they))
+
+# ::id fracas-121.hypothesis_yes ::date 2017-03-08T23:09:30
+# ::snt Smith delivered a report, an invoice and a project proposal to ITEL.
+# ::user timjogorman
+(d / deliver-01
+      :ARG0 (p / person :wiki -
+            :name (n / name :op1 "Smith"))
+      :ARG1 (a / and
+            :op1 (r / report)
+            :op2 (i2 / invoice)
+            :op3 (p2 / propose-01
+                  :ARG1 (p3 / project)))
+      :ARG2 (c / company :wiki -
+            :name (n2 / name :op1 "ITEL")))

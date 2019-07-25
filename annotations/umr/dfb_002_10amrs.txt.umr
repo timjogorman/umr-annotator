@@ -1,0 +1,287 @@
+# ::umr
+(u1 / utterance
+    :snt0 (s1 / sentence-91
+              :assert (g1 / generalization
+                          :deont-neg (o1 / order-01
+                                         :doclink "s0-o")
+                          :ref (a1 / anything
+                                   :doclink "s0-a")
+                          :condition (d1 / deliver-01
+                                         :doclink "s0-d"))
+              :assert (e1 / experience-01
+                          :doclink "s0-e"
+                          :before u1
+                          :subevent (o2 / order-02
+                                        :doclink "s1-o"
+                                        :cause (h2 / have-degree-91
+                                                   :doclink "s1-h")))
+              :ref (c1 / company
+                       :doclink "s0-c")
+              :ref (i2 / i
+                       :doclink "s0-i"
+                       :coref (a / author)))
+    :snt1 (s2 / sentence-91
+              :assert o2
+              :ref (t2 / television
+                       :doclink "s1-t")
+              :assert h2
+              :ref (c2 / company
+                       :doclink "s1-c2")
+              :deny (s11 / stock-01
+                         :doclink "s1-s"))
+    :snt2 (s3 / sentence-91
+              :assert (a2 / advise-01
+                          :doclink "s2-a"
+                          :arg0 (i1 / implicit)
+                          :info-source i1
+                          :assert (d2 / deliver-01
+                                      :doclink "s2-d"
+                                      :ref (i3 / it
+                                               :doclink "s2-i"
+                                               :coref t2)
+                                      :contained-by (d3 / date-entity
+                                                        :doclink "s2-d2"
+                                                        :before u1)))
+              :ref d3)
+    :snt3 (s4 / sentence-91
+              :assert (c3 / come-01
+                          :doclink "s3-c")
+              :assert (g2 / go-01
+                          :doclink "s3-g")
+              :ref (d4 / date-entity
+                       :doclink "s3-d"
+                       :coref d3))
+    :snt4 (s5 / sentence-91
+              :assert (p2 / phone-01
+                          :doclink "s4-p")
+              :assert (s12 / say-01
+                           :doclink "s4-s"
+                           :info-source (c4 / company
+                                            :doclink "s4-c"
+                                            :coref c1)
+                           :assert (n1 / need-01
+                                       :doclink "s4-n")
+                           :ref (n2 / number
+                                    :doclink "s4-n3")
+                           :subevent-of p12)
+              :ref c4)
+    :snt5 (s6 / sentence-91
+              :assert (p1 / phone-01
+                          :doclink "s5-p"
+                          :subevent (g3 / get-01
+                                        :doclink "s5-g")
+                          :after p2)
+              :assert g3)
+    :snt6 (s7 / sentence-91
+              :assert (p3 / phone-01
+                          :doclink "s6-p"
+                          :after p1
+                          :subevent (s14 / say-01
+                                         :doclink "s6-s"
+                                         :info-source (c5 / company
+                                                          :doclink "s6-c"
+                                                          :coref c1)
+                                         :assert (l1 / leave-02
+                                                     :doclink "s6-l3")
+                                         :assert (g4 / generalization
+                                                     :permit-neg (l2 / leave-02
+                                                                     :doclink "s6-l2")
+                                                     :ref (n3 / neighbor
+                                                              :doclink "s6-n2")
+                                                     :condition-neg (b1 / be-located-at-91
+                                                                        :doclink "s6-b"))
+                                         :deny b1))
+              :ref (i4 / i
+                       :doclink "s6-i3"
+                       :coref a)
+              :ref c5)
+    :snt7 (s8 / sentence-91
+              :assert (a3 / arrange-01
+                          :doclink "s7-a")
+              :neut (d6 / deliver-01
+                        :doclink "s7-d"
+                        :after a3)
+              :ref (d5 / date-entity
+                       :doclink "s7-d2"
+                       :contains d6
+                       :before u1))
+    :snt8 (s9 / sentence-91
+              :assert (a4 / arrive-01
+                          :doclink "s8-a")
+              :assert (d7 / deliver-01
+                          :doclink "s8-d"
+                          :before a4)
+              :ref (h1 / home
+                       :doclink "s8-h")
+              :assert (s13 / say-01
+                           :doclink "s8-s"
+                           :inf-source (c6 / card
+                                           :doclink "s8-c")
+                           :assert (i5 / identity-91
+                                       :arg1 d7
+                                       :arg2 (a5 / attempt-01
+                                                 :doclink "s8-a2")))
+              :ref c6
+              :ref (t1 / they
+                       :doclink "s8-t"
+                       :coref c1))
+    :snt9 (s10 / sentence-91
+               :assert (i6 / identity-91
+                           :arg1 (b2 / bunch
+                                     :doclink "s9-b")
+                           :arg2 (i7 / implicit
+                                     :coref c1)))
+    :info-source a)
+
+# ::id web1-eng-DF-225-196030-2758745_0001.1 ::date 2015-08-10T10:19:20 ::annotator SDL-AMR-09 ::preferred
+# ::snt Don't order anything online if Amtrak are delivering it - here's my experience.
+# ::save-date Wed Aug 19, 2015 ::file web1-eng-DF-225-196030-2758745_0001_1.txt
+(m / multi-sentence
+      :snt1 (o / order-01 :polarity - :mode imperative
+            :ARG0 (y / you)
+            :ARG1 (a / anything)
+            :location (o2 / online)
+            :condition (d / deliver-01
+                  :ARG0 (c / company :wiki "Amtrak"
+                        :name (n / name :op1 "Amtrak"))
+                  :ARG1 a))
+      :snt2 (e / experience-01
+            :ARG0 (i / i)
+            :location (h / here)))
+
+# ::id web1-eng-DF-225-196030-2758745_0001.2 ::date 2015-08-10T10:19:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt Ordered a 32" TV online, cheaper than Argos - who didn't have it in stock - but with the delivery charge the cost was the same.
+# ::save-date Thu Oct 26, 2017 ::file web1-eng-DF-225-196030-2758745_0001_2.txt
+(o / order-02
+      :ARG1 (t / television
+            :mod (d2 / distance-quantity :quant 32
+                  :unit (i / inch))
+            :ARG1-of (h / have-degree-91
+                  :ARG2 (c / cheap-02
+                        :ARG1 t)
+                  :ARG3 (m3 / more)
+                  :ARG4 (c2 / company :wiki "Argos_(retailer)" :name (n / name :op1 "Argos")
+                        :ARG0-of (s / stock-01 :polarity -
+                              :ARG1 t))))
+      :location (o2 / online)
+      :concession-of (s2 / same-01
+            :ARG1 (m / monetary-quantity
+                  :ARG2-of (c3 / cost-01)
+                  :ARG2-of (i2 / include-91
+                        :ARG1 (m2 / monetary-quantity
+                              :ARG1-of (c4 / charge-01
+                                    :ARG3 (d / deliver-01
+                                          :ARG1 t)))))))
+
+# ::id web1-eng-DF-225-196030-2758745_0001.3 ::date 2015-08-10T10:20:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt Advised that it would be delivered by Amtrak on Tuesday.
+# ::save-date Tue Aug 11, 2015 ::file web1-eng-DF-225-196030-2758745_0001_3.txt
+(a / advise-01
+      :ARG2 (d / deliver-01
+            :ARG0 (c / company :wiki "Amtrak"
+                  :name (n / name :op1 "Amtrak"))
+            :ARG1 (i / it)
+            :time (d2 / date-entity
+                  :weekday (t / tuesday))))
+
+# ::id web1-eng-DF-225-196030-2758745_0001.4 ::date 2015-08-10T10:24:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt Tuesday came and went, no sign.
+# ::save-date Wed Dec 21, 2016 ::file web1-eng-DF-225-196030-2758745_0001_4.txt
+(a / and
+      :op1 (c / come-01
+            :ARG1 (d / date-entity
+                  :weekday (t / tuesday)))
+      :op2 (g / go-01
+            :ARG1 d)
+      :mod (s / signal-07 :polarity -))
+
+# ::id web1-eng-DF-225-196030-2758745_0001.5 ::date 2015-08-10T10:31:20 ::annotator SDL-AMR-09 ::preferred
+# ::snt Phoned Amtrak on Wednesday, "we need a consignment number".
+# ::save-date Thu Feb 11, 2016 ::file web1-eng-DF-225-196030-2758745_0001_5.txt
+(a / and
+      :op1 (p / phone-01
+            :ARG1 (c / company :wiki "Amtrak" :name (n2 / name :op1 "Amtrack"))
+            :time (d / date-entity
+                  :weekday (w / wednesday)))
+      :op2 (s / say-01
+            :ARG0 c
+            :ARG1 (n / need-01
+                  :ARG0 c
+                  :ARG1 (n3 / number
+                        :mod (c2 / consign-01)))))
+
+# ::id web1-eng-DF-225-196030-2758745_0001.6 ::date 2015-08-10T10:31:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt Phoned online company and got it.
+# ::save-date Mon Aug 10, 2015 ::file web1-eng-DF-225-196030-2758745_0001_6.txt
+(a / and
+      :op1 (p / phone-01
+            :ARG1 (c / company
+                  :mod (o / online)))
+      :op2 (g / get-01
+            :ARG1 (i / it)))
+
+# ::id web1-eng-DF-225-196030-2758745_0001.7 ::date 2015-08-10T10:37:15 ::annotator SDL-AMR-09 ::preferred
+# ::snt Phoned Amtrak "a card was left on Tuesday as you weren't there" (no it wasn't of course), and "we're not allowed to leave it with a neighbour".
+# ::save-date Wed Dec 9, 2015 ::file web1-eng-DF-225-196030-2758745_0001_7.txt
+(a3 / and
+      :op1 (p / phone-01
+            :ARG0 (i3 / i)
+            :ARG1 (c / company :wiki "Amtrak"
+                  :name (n / name :op1 "Amtrak")))
+      :op2 (s / say-01
+            :ARG0 c
+            :ARG1 (a / and
+                  :op1 (a4 / and
+                        :op1 (l / leave-02
+                              :ARG1 (c2 / card)
+                              :time (d / date-entity
+                                    :weekday (t / tuesday))
+                              :ARG1-of (c3 / cause-01
+                                    :ARG0 (b / be-located-at-91
+                                          :ARG1 i3
+                                          :ARG2 (t2 / there))))
+                        :op2 (l3 / leave-02 :polarity -
+                              :ARG1 c2
+                              :mod (o / of-course)))
+                  :op2 (a2 / allow-01 :polarity -
+                        :ARG1 (l2 / leave-02
+                              :ARG0 c
+                              :ARG1 (i2 / it)
+                              :ARG2 (n2 / neighbor))))))
+
+# ::id web1-eng-DF-225-196030-2758745_0001.8 ::date 2015-08-10T10:38:05 ::annotator SDL-AMR-09 ::preferred
+# ::snt Arranged for another delivery on Saturday.
+# ::save-date Wed Dec 9, 2015 ::file web1-eng-DF-225-196030-2758745_0001_8.txt
+(a / arrange-01
+      :ARG1 (d / deliver-01
+            :time (d2 / date-entity
+                  :weekday (s / saturday))
+            :mod (a2 / another)))
+
+# ::id web1-eng-DF-225-196030-2758745_0001.9 ::date 2015-08-10T10:40:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt Arrived home yesterday - it had been delivered next door yesterday, with a card saying this was their first attempt at delivery...
+# ::save-date Wed Dec 9, 2015 ::file web1-eng-DF-225-196030-2758745_0001_9.txt
+(m / multi-sentence
+      :snt1 (a / arrive-01
+            :ARG1 i
+            :ARG4 (h / home)
+            :time (y / yesterday))
+      :snt2 (d / deliver-01
+            :ARG0 t
+            :ARG1 (i / it)
+            :ARG2 (d2 / door
+                  :mod (n / next))
+            :time (y2 / yesterday)
+            :accompanier (c / card
+                  :ARG0-of (s / say-01
+                        :ARG1 (a2 / attempt-01
+                              :ARG0 (t / they)
+                              :ARG1 d
+                              :ord (o2 / ordinal-entity :value 1))))))
+
+# ::id web1-eng-DF-225-196030-2758745_0001.10 ::date 2015-08-10T10:41:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt What a bunch of jokers.
+# ::save-date Wed Aug 19, 2015 ::file web1-eng-DF-225-196030-2758745_0001_10.txt
+(b / bunch :mode expressive
+      :consist-of (p / person
+            :ARG0-of (j / joke-01)))

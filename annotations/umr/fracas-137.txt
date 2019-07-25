@@ -1,0 +1,53 @@
+# ::id fracas-137.premise_0 ::date 2017-03-08T23:09:30
+# ::snt There are 100 companies.
+# ::user timjogorman
+(c / company :quant 100)
+
+# ::id fracas-137.premise_1 ::date 2017-03-08T23:09:30
+# ::snt ICM is one of the companies and owns 150 computers.
+# ::user timjogorman
+(a / and
+      :op1 (i2 / include-91
+            :ARG1 (c2 / company :wiki - :name (n / name :op1 "ICM"))
+            :ARG2 (c / company))
+      :op2 (o / own-01
+            :ARG0 c2
+            :ARG1 (c3 / computer :quant 150)))
+
+# ::id fracas-137.premise_2 ::date 2017-03-08T23:09:30
+# ::snt It does not have service contracts for any of its computers.
+# ::user timjogorman
+(c / contract-02 :polarity -
+      :ARG0 (i2 / it)
+      :ARG1 (s / service-05
+            :ARG1 (c2 / computer
+                  :mod (a / any)
+                  :poss i2)))
+
+# ::id fracas-137.premise_3 ::date 2017-03-08T23:09:30
+# ::snt Each of the other 99 companies owns one computer.
+# ::user timjogorman
+(o / own-01
+      :ARG0 (c / company
+            :ARG1-of (i2 / include-91
+                  :ARG2 (c3 / company :quant 99
+                        :mod (o2 / other))
+                  :ARG3 (a / all)))
+      :ARG1 (c2 / computer :quant 1))
+
+# ::id fracas-137.premise_4 ::date 2017-03-08T23:09:30
+# ::snt They have service contracts for them.
+# ::user timjogorman
+(c / contract-02
+      :ARG0 (t / they)
+      :ARG1 (s / serve-01
+            :ARG1 (t2 / they)))
+
+# ::id fracas-137.hypothesis_yes ::date 2017-03-08T23:09:30
+# ::snt Most companies that own a computer have a service contract for it.
+# ::user timjogorman
+(c / contract-02
+      :ARG0 (c2 / company
+            :mod (m / most)
+            :poss (c3 / computer))
+      :ARG1 (s / service))

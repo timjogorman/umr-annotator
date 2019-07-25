@@ -1,0 +1,14 @@
+# ::id BoyB.019
+(n1 / noohob
+    :experiencer (h1 / hinen
+                     :poss h1)
+    :source (y1 / yeih')
+    :stimulus (h2 / honoh'oehiho'))
+
+# ::id BoyB.020
+(x1 / 'ii
+    :theme (h1 / heniihoho'neihi
+               :domain (h2 / honoh'oehihi')
+               :arg1-of x1)
+    :agent (n1 / no'))
+

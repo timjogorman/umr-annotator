@@ -1,0 +1,1799 @@
+(x0 / join-01
+    :ARG0 (x1 / person
+              :name (x2 / name
+                        :op1 "Pierre"
+                        :op2 "Vinken")
+              :age (x3 / temporal-quantity
+                       :unit (x4 / year)
+                       :quant 61))
+    :ARG1 (x5 / board
+              :ARG1-of (x6 / have-org-role-91
+                           :ARG0 x1
+                           :ARG2 (x7 / director
+                                     :mod (x8 / executive
+                                              :polarity -))))
+    :time (x9 / date-entity
+              :month 11
+              :day 29))
+
+(x0 / have-org-role-91
+    :ARG0 (x1 / person
+              :name (x2 / name
+                        :op1 "Mr."
+                        :op2 "Vinken"))
+    :ARG1 (x3 / group
+              :name (x4 / name
+                        :op1 "Elsevier"
+                        :op2 "N.V.")
+              :mod (x5 / country
+                       :name (x6 / name
+                                 :op1 "Netherlands"))
+              :ARG0-of (x7 / publish-01))
+    :ARG2 (x8 / chairman))
+
+(x0 / report-01
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / research-01))
+    :ARG1 (x3 / cause-01
+              :ARG0 (x4 / asbestos
+                        :mod (x5 / form)
+                        :ARG1-of (x6 / use-01
+                                     :ARG2 (x7 / make-01
+                                               :ARG1 (x8 / product
+                                                         :mod (x10 / cigarette
+                                                                   :name (x11 / name
+                                                                              :op1 "Kent"))
+                                                         :ARG0-of (x9 / filter-02)))
+                                     :time (x12 / once)))
+              :ARG1 (x13 / percentage
+                         :ARG3-of (x14 / include-91
+                                       :ARG1 (x15 / person
+                                                  :ARG1-of (x16 / die-01
+                                                                :ARG1-of (x17 / cause-01
+                                                                              :ARG0 (x18 / disease
+                                                                                         :name (x19 / name
+                                                                                                    :op1 "cancer")))))
+                                       :ARG2 (x20 / person
+                                                  :ARG0-of (x21 / work-01)
+                                                  :ARG1-of (x22 / expose-01
+                                                                :ARG2 x4
+                                                                :time (x23 / before
+                                                                           :op1 (x24 / now)
+                                                                           :quant (x25 / more-than
+                                                                                       :op1 (x26 / temporal-quantity
+                                                                                                 :unit (x27 / year)
+                                                                                                 :quant 30))))))
+                         :ARG1-of (x28 / high-02))))
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / research-01))
+    :ARG1 (x3 / and
+              :op1 (x4 / resilient
+                       :mod (x5 / usual
+                                :polarity -)
+                       :domain (x6 / crocidolite
+                                   :mod (x7 / fiber
+                                            :mod (x8 / asbestos)))
+                       :time (x9 / enter-01
+                                 :ARG0 x6
+                                 :ARG1 (x10 / lung)))
+              :op2 (x11 / cause-01
+                        :ARG0 (x12 / expose-01
+                                   :ARG2 x6
+                                   :duration (x13 / brief
+                                                  :mod (x14 / even)))
+                        :ARG1 (x15 / symptom
+                                   :ARG1-of (x16 / show-up-02
+                                                 :time (x17 / after
+                                                            :op1 x12
+                                                            :quant (x18 / multiple
+                                                                        :op1 (x19 / temporal-quantity
+                                                                                  :unit (x20 / decade)
+                                                                                  :quant 1))))))))
+
+(x0 / stop-01
+    :ARG0 (x1 / unit
+              :name (x2 / name
+                        :op1 "Lorillard"
+                        :op2 "Inc.")
+              :part-of (x3 / company
+                           :name (x4 / name
+                                     :op1 "Loews"
+                                     :op2 "Corp.")
+                           :ARG1-of (x5 / base-01
+                                        :location (x6 / city
+                                                      :name (x7 / name
+                                                                :op1 "New"
+                                                                :op2 "York"))))
+              :ARG0-of (x8 / make-01
+                           :ARG1 (x9 / cigarette
+                                     :name (x10 / name
+                                                :op1 "Kent"))))
+    :ARG1 (x11 / use-01
+               :ARG0 x1
+               :ARG1 (x12 / crocidolite)
+               :prep-in (x13 / product
+                             :poss x1
+                             :name (x14 / name
+                                        :op1 "Micronite")
+                             :mod (x16 / cigarette)
+                             :ARG0-of (x15 / filter-02)))
+    :time (x17 / date-entity
+               :year 1956))
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / have-org-role-91
+                           :ARG1 (x3 / company
+                                     :name (x4 / name
+                                               :op1 "Lorillard"))
+                           :ARG2 (x5 / spokeswoman)))
+    :ARG1 (x6 / story
+              :domain (x7 / this)
+              :mod (x8 / old)))
+
+(x0 / asbestos
+    :time (x1 / now)
+    :location (x2 / thing
+                  :ARG1-of (x3 / produce-01
+                               :ARG0 (x4 / we)))
+    :polarity -)
+
+(x0 / realize-01
+    :ARG0 (x1 / and
+              :op1 (x2 / company
+                       :name (x3 / name
+                                 :op1 "Lorillard"))
+              :op2 (x4 / person
+                       :ARG0-of (x5 / research-01)
+                       :ARG0-of (x6 / study-01
+                                    :ARG1 (x7 / person
+                                              :ARG0-of (x8 / work-01)))))
+    :ARG1 (x9 / research-01
+              :ARG1 (x10 / person
+                         :ARG0-of (x11 / smoke-02
+                                       :ARG1 (x12 / cigarette
+                                                  :name (x13 / name
+                                                             :op1 "Kent")))))
+    :polarity -)
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :name (x2 / name
+                        :op1 "James"
+                        :op2 "A."
+                        :op3 "Talcott")
+              :ARG0-of (x3 / have-org-role-91
+                           :ARG1 (x4 / research-institute
+                                     :name (x5 / name
+                                               :op1 "Dana-Farber"
+                                               :op2 "Cancer"
+                                               :op3 "Institute")
+                                     :location (x6 / city
+                                                   :name (x7 / name
+                                                             :op1 "Boston")))))
+    :ARG1 (x8 / have-03
+              :ARG0 (x9 / we)
+              :ARG1 (x10 / information
+                         :topic (x12 / truth-value
+                                     :polarity-of (x13 / endanger-01
+                                                       :ARG1 (x14 / person
+                                                                  :ARG0-of (x15 / use-01))))
+                         :ARG1-of (x11 / useful-05))
+              :polarity -))
+
+(x0 / lead-02
+    :ARG0 (x1 / doctor
+              :name (x2 / name
+                        :op1 "Talcott"))
+    :ARG1 (x3 / team
+              :consist-of (x4 / person
+                              :ARG0-of (x5 / research-01)
+                              :ARG0-of (x6 / have-org-role-91
+                                           :ARG1 (x7 / and
+                                                     :op1 (x8 / research-institute
+                                                              :name (x9 / name
+                                                                        :op1 "National"
+                                                                        :op2 "Cancer"
+                                                                        :op3 "Institute"))
+                                                     :op2 (x10 / school
+                                                               :mod (x11 / medicine)
+                                                               :part-of (x12 / university
+                                                                             :name (x13 / name
+                                                                                        :op1 "Harvard"
+                                                                                        :op2 "University")))
+                                                     :op3 (x14 / school
+                                                               :mod (x15 / medicine)
+                                                               :part-of (x16 / university
+                                                                             :name (x17 / name
+                                                                                        :op1 "Boston"
+                                                                                        :op2 "University"))))))))
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / have-org-role-91
+                           :ARG1 (x3 / company
+                                     :name (x4 / name
+                                               :op1 "Lorillard"))
+                           :ARG2 (x5 / spokeswoman)))
+    :ARG1 (x6 / and
+              :op1 (x7 / use-01
+                       :ARG1 (x8 / asbestos
+                                 :quant (x9 / amount
+                                            :mod (x10 / modest
+                                                      :degree (x11 / very))))
+                       :ARG2 (x12 / make-01
+                                  :ARG1 (x13 / paper)
+                                  :time (x14 / early
+                                             :op1 (x15 / date-entity
+                                                       :decade 1950))
+                                  :purpose (x16 / product
+                                                :ARG0-of (x17 / filter-02))))
+              :op2 (x18 / replace-01
+                        :ARG1 x8
+                        :ARG2 (x19 / product
+                                   :ARG0-of (x20 / filter-02
+                                                 :mod (x21 / type
+                                                           :ARG1-of (x22 / differ-02))))
+                        :time (x23 / date-entity
+                                   :year 1956))))
+
+(x0 / say-01
+    :ARG0 (x1 / company)
+    :ARG1 (x2 / sell-01
+              :ARG1 (x3 / cigarette
+                        :name (x4 / name
+                                  :op1 "Kent")
+                        :part (x5 / product
+                                  :ARG0-of (x6 / filter-02))
+                        :quant 9800000000)
+              :time (x7 / date-interval
+                        :op1 (x8 / date-entity
+                                 :year 1953)
+                        :op2 (x9 / date-entity
+                                 :year 1955))))
+
+(x0 / die-01
+    :ARG1 (x1 / man
+              :quant (x2 / more-than
+                         :op1 (x3 / product-of
+                                  :op2 (x4 / number
+                                           :ARG1-of (x5 / expect-01))
+                                  :op1 3))
+              :quant 28
+              :ARG1-of (x6 / include-91
+                           :ARG2 (x7 / man
+                                     :quant 33
+                                     :ARG0-of (x8 / work-01
+                                                  :ARG1 (x9 / substance)
+                                                  :manner (x10 / close-10))))))
+
+(x0 / have-03
+    :ARG0 (x1 / person
+              :quant 4
+              :ARG1-of (x2 / include-91
+                           :ARG2 (x3 / person
+                                     :quant 5
+                                     :ARG0-of (x4 / work-01)
+                                     :ARG0-of (x5 / survive-01)))
+              :ARG2-of (x6 / include-91
+                           :ARG1 (x7 / person
+                                     :quant 3
+                                     :ARG1-of (x8 / diagnose-01
+                                                  :ARG2 (x9 / disease
+                                                            :name (x10 / name
+                                                                       :op1 "cancer"))
+                                                  :time (x11 / recent)))))
+    :ARG1 (x12 / disease
+               :ARG1-of (x13 / relate-01
+                             :ARG2 (x14 / asbestos))))
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / research-01))
+    :ARG1 (x3 / have-degree-91
+              :ARG1 (x4 / total
+                        :quant-of (x5 / person
+                                      :quant 18
+                                      :ARG1-of (x6 / die-01
+                                                   :ARG1-of (x7 / cause-01
+                                                                :ARG0 (x8 / and
+                                                                          :op1 (x9 / disease
+                                                                                   :name (x10 / name
+                                                                                              :op1 "malignant"
+                                                                                              :op2 "mesothelioma"))
+                                                                          :op2 (x11 / disease
+                                                                                    :name (x12 / name
+                                                                                               :op1 "lung"
+                                                                                               :op2 "cancer"))
+                                                                          :op3 (x13 / disease
+                                                                                    :name (x14 / name
+                                                                                               :op1 "asbestosis")))))))
+              :ARG2 (x15 / high-02)
+              :ARG3 (x16 / more
+                         :quant (x17 / far))
+              :ARG4 (x18 / thing
+                         :ARG1-of (x19 / expect-01))))
+
+(x0 / say-01
+    :ARG0 (x1 / doctor
+              :name (x2 / name
+                        :op1 "Talcott"))
+    :ARG1 (x3 / rate
+              :mod (x4 / die-01)
+              :ARG1-of (x5 / find-01)
+              :ARG1-of (x6 / strike-04
+                           :ARG3 (x7 / person
+                                     :mod (x14 / that)
+                                     :ARG0-of (x8 / study-01
+                                                  :ARG1 (x9 / disease
+                                                            :ARG1-of (x10 / relate-01
+                                                                          :ARG2 (x11 / asbestos))))
+                                     :ARG1-of (x12 / include-91
+                                                   :ARG2 (x13 / we))))))
+
+(x0 / say-01
+    :ARG0 (x1 / he)
+    :ARG1 (x2 / appear-02
+              :ARG1 (x3 / have-degree-91
+                        :ARG1 (x4 / percentage
+                                  :quant-of (x5 / person
+                                                :ARG1-of (x6 / die-01
+                                                             :ARG1-of (x7 / cause-01
+                                                                          :ARG0 (x8 / disease
+                                                                                    :name (x9 / name
+                                                                                              :op1 "lung"
+                                                                                              :op2 "cancer"))))
+                                                :ARG1-of (x10 / include-91
+                                                              :ARG2 (x11 / person
+                                                                         :ARG0-of (x12 / work-01
+                                                                                       :location (x13 / factory
+                                                                                                      :mod (x14 / paper)
+                                                                                                      :location (x15 / city
+                                                                                                                     :name (x16 / name
+                                                                                                                                :op1 "West"
+                                                                                                                                :op2 "Groton")
+                                                                                                                     :location (x17 / state
+                                                                                                                                    :name (x18 / name
+                                                                                                                                               :op1 "Massachusetts")))))))))
+                        :ARG2 (x19 / high-02)
+                        :ARG3 (x20 / most)
+                        :ARG5 (x21 / person
+                                   :location (x25 / country
+                                                  :location (x27 / world-region
+                                                                 :name (x28 / name
+                                                                            :op1 "West"))
+                                                  :ARG1-of (x26 / industrialize-01))
+                                   :mod (x29 / any)
+                                   :ARG0-of (x22 / work-01
+                                                 :ARG1 (x23 / asbestos))
+                                   :ARG1-of (x24 / study-01)))))
+
+(x0 / contract-02
+    :ARG0 (x1 / plant
+              :ARG1-of (x2 / own-01
+                           :ARG0 (x3 / company
+                                     :name (x4 / name
+                                               :op1 "Hollingsworth"
+                                               :op2 "&"
+                                               :op3 "Vose"
+                                               :op4 "Co."))))
+    :ARG1 (x5 / make-01
+              :ARG0 x1
+              :ARG1 (x6 / product
+                        :mod (x8 / cigarette)
+                        :ARG0-of (x7 / filter-02)))
+    :ARG2 (x9 / company
+              :name (x10 / name
+                         :op1 "Lorillard")))
+
+(x0 / say-01
+    :ARG0 (x1 / doctor
+              :name (x2 / name
+                        :op1 "Talcott"))
+    :ARG1 (x3 / probable
+              :domain (x4 / support-01
+                          :ARG0 (x5 / thing
+                                    :ARG1-of (x6 / find-01))
+                          :ARG1 (x7 / person
+                                    :ARG0-of (x8 / argue-01
+                                                 :ARG1 (x9 / recommend-01
+                                                           :ARG1 (x10 / regulate-01
+                                                                      :ARG0 (x11 / country
+                                                                                 :name (x12 / name
+                                                                                            :op1 "U.S."))
+                                                                      :ARG1 (x13 / asbestos
+                                                                                 :mod (x16 / class)
+                                                                                 :ARG2-of (x14 / include-91
+                                                                                               :ARG1 (x15 / crocidolite)))
+                                                                      :manner (x17 / stringent
+                                                                                   :ARG2-of (x18 / have-degree-91
+                                                                                                 :ARG1 x10
+                                                                                                 :ARG3 (x19 / more)
+                                                                                                 :ARG4 (x20 / chrysotile
+                                                                                                            :mod (x27 / asbestos
+                                                                                                                      :mod (x28 / kind
+                                                                                                                                :mod (x29 / common)))
+                                                                                                            :ARG1-of (x21 / find-01
+                                                                                                                          :location (x22 / and
+                                                                                                                                         :op1 (x23 / school
+                                                                                                                                                   :mod (x24 / most))
+                                                                                                                                         :op2 (x25 / building
+                                                                                                                                                   :mod (x26 / other))))))))))))))
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :name (x2 / name
+                        :op1 "Brooke"
+                        :op2 "T."
+                        :op3 "Mossman")
+              :ARG0-of (x3 / have-org-role-91
+                           :ARG1 (x4 / college
+                                     :mod (x5 / medicine)
+                                     :part-of (x6 / university
+                                                  :name (x7 / name
+                                                            :op1 "University"
+                                                            :op2 "of"
+                                                            :op3 "Vermont")))
+                           :ARG2 (x8 / professor
+                                     :topic (x9 / pathology))))
+    :ARG1 (x10 / include-91
+               :ARG1 (x11 / country
+                          :name (x12 / name
+                                     :op1 "U.S."))
+               :ARG2 (x13 / nation
+                          :ARG1-of (x14 / include-91
+                                        :ARG2 (x15 / nation
+                                                   :ARG1-of (x16 / industrialize-01))
+                                        :ARG3 (x17 / few))
+                          :ARG0-of (x18 / regulate-01
+                                        :manner (x19 / standard-02
+                                                     :ARG2 x13
+                                                     :ARG1 (x20 / fiber
+                                                                :example (x26 / crocidolite)
+                                                                :ARG1-of (x21 / smooth-06)
+                                                                :ARG2-of (x22 / resemble-01
+                                                                              :ARG1 (x23 / needle))
+                                                                :ARG1-of (x24 / classify-01
+                                                                              :ARG2 (x25 / amphibole)))
+                                                     :ARG1-of (x27 / have-degree-91
+                                                                   :ARG2 (x28 / high-02
+                                                                              :ARG1 x19)
+                                                                   :ARG3 (x29 / more)))
+                                        :ARG1 x20
+                                        :polarity -))))
+
+(x0 / explain-01
+    :ARG0 (x1 / doctor
+              :name (x2 / name
+                        :op1 "Mossman"))
+    :ARG1 (x3 / and
+              :op1 (x4 / curly
+                       :domain (x5 / fiber
+                                   :mod (x6 / chrysotile)
+                                   :ARG1-of (x7 / have-degree-91
+                                                :ARG2 (x8 / common)
+                                                :ARG3 (x9 / more))))
+              :op2 (x10 / reject-01
+                        :ARG1 x5
+                        :ARG0 (x11 / body)
+                        :ARG1-of (x12 / have-degree-91
+                                      :ARG2 (x13 / easy-05
+                                                 :ARG1 x10)
+                                      :ARG3 (x14 / more)))))
+
+(x0 / impose-01
+    :ARG0 (x1 / government-organization
+              :name (x2 / name
+                        :op1 "Environmental"
+                        :op2 "Protection"
+                        :op3 "Agency"))
+    :ARG1 (x3 / ban-01
+              :ARG1 (x4 / use-01
+                        :ARG1 (x5 / asbestos)
+                        :ARG2 (x6 / thing
+                                  :mod (x7 / all
+                                           :degree (x8 / virtual))))
+              :manner (x9 / gradual))
+    :time (x10 / date-entity
+               :month 7))
+
+(x0 / outlaw-01
+    :ARG1 (x1 / use-01
+              :ARG1 (x2 / asbestos
+                        :ARG0-of (x3 / cause-01
+                                     :ARG1 (x4 / disease
+                                               :name (x5 / name
+                                                         :op1 "cancer"))))
+              :ARG2 (x6 / thing
+                        :mod (x8 / all
+                                 :mod (x9 / almost))
+                        :ARG1-of (x7 / remain-01)))
+    :time (x10 / by
+               :op1 (x11 / date-entity
+                         :year 1997)))
+
+(x0 / expose-01
+    :ARG1 (x1 / person
+              :quant (x9 / about
+                         :op1 160)
+              :ARG0-of (x2 / work-01
+                           :location (x3 / factory
+                                         :ARG0-of (x4 / make-01
+                                                      :ARG1 (x5 / paper
+                                                                :purpose (x6 / product
+                                                                             :name (x7 / name
+                                                                                       :op1 "Kent")
+                                                                             :ARG0-of (x8 / filter-02)))))))
+    :ARG2 (x10 / asbestos)
+    :time (x11 / date-entity
+               :decade 1950))
+
+(x0 / dusty
+    :domain (x1 / area
+                :poss (x2 / factory)
+                :location-of (x3 / use-01
+                                 :ARG1 (x4 / crocidolite)))
+    :mod (x5 / particular))
+
+(x0 / and
+    :op1 (x1 / dump-01
+             :ARG0 (x2 / person
+                       :ARG0-of (x3 / work-01))
+             :ARG1 (x4 / material
+                       :quant (x6 / sack
+                                  :mod (x8 / large)
+                                  :consist-of (x7 / burlap))
+                       :ARG1-of (x5 / import-01))
+             :destination (x9 / bin
+                              :mod (x10 / huge)))
+    :op2 (x11 / pour-01
+              :ARG0 x2
+              :ARG3 x9
+              :ARG1 (x12 / and
+                         :op1 (x13 / fiber
+                                   :mod (x14 / cotton))
+                         :op2 (x15 / fiber
+                                   :mod (x16 / acetate))))
+    :op3 (x17 / mix-01
+              :ARG0 x2
+              :ARG1 (x18 / fiber
+                         :ARG1-of (x19 / dry-08))
+              :manner (x20 / mechanical))
+    :prep-in (x21 / process-02
+                  :ARG1 (x23 / make-01
+                             :ARG1 (x24 / product
+                                        :ARG0-of (x25 / filter-02)))
+                  :ARG1-of (x22 / use-01
+                                :ARG2 x23)))
+
+(x0 / describe-01
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / work-01))
+    :ARG1 (x3 / cloud
+              :consist-of (x4 / dust
+                              :mod (x5 / blue))
+              :ARG1-of (x6 / hang-01
+                           :location (x7 / over
+                                         :op1 (x8 / thing
+                                                  :part-of (x9 / factory)))
+                           :concession (x10 / ventilate-01
+                                            :ARG0 (x11 / fan
+                                                       :mod (x12 / exhaust))
+                                            :ARG1 (x13 / area)))))
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :name (x2 / name
+                        :op1 "Darrell"
+                        :op2 "Phillips")
+              :ARG0-of (x3 / have-org-role-91
+                           :ARG1 (x4 / company
+                                     :name (x5 / name
+                                               :op1 "Hollingsworth"
+                                               :op2 "&"
+                                               :op3 "Vose"))
+                           :ARG2 (x6 / president
+                                     :mod (x7 / vice)
+                                     :topic (x8 / resource
+                                                :mod (x9 / human)))))
+    :ARG1 (x10 / question-03
+               :ARG1 (x11 / contract-04
+                          :ARG1 (x12 / person
+                                     :ARG1-of (x13 / include-91
+                                                   :ARG2 (x14 / and
+                                                              :op1 (x15 / person
+                                                                        :ARG0-of (x16 / work-01))
+                                                              :op2 (x17 / person
+                                                                        :ARG0-of (x18 / manage-01))
+                                                              :mod (x19 / that))))
+                          :ARG2 (x20 / disease
+                                     :ARG1-of (x21 / relate-01
+                                                   :ARG2 (x22 / asbestos))))
+               :polarity -))
+
+(x0 / contrast-01
+    :ARG2 (x1 / obligate-01
+              :ARG2 (x2 / recognize-02
+                        :ARG0 (x3 / you)
+                        :ARG1 (x4 / event
+                                  :mod (x5 / this)
+                                  :time (x6 / before
+                                            :op1 (x7 / now)
+                                            :quant (x8 / temporal-quantity
+                                                       :unit (x9 / year)
+                                                       :quant 35))))
+              :ARG1 x3))
+
+(x0 / bear-06
+    :ARG1 (x1 / it)
+    :ARG2 (x2 / force
+              :poss (x4 / we)
+              :ARG0-of (x3 / work-01))
+    :time (x5 / today)
+    :polarity -)
+
+(x0 / continue-01
+    :ARG1 (x1 / slide-02
+              :ARG1 (x2 / thing
+                        :ARG1-of (x3 / yield-03
+                                     :ARG0 (x4 / fund
+                                               :mod (x5 / mutual)
+                                               :mod (x6 / market
+                                                        :mod (x7 / money))))))
+    :prep-amid (x8 / signal-07
+                   :ARG1 (x9 / expect-01
+                             :ARG0 (x10 / person
+                                        :ARG0-of (x11 / manage-01
+                                                      :ARG1 (x12 / portfolio)))
+                             :ARG1 (x13 / decline-01
+                                        :ARG1 (x14 / rate
+                                                   :mod (x15 / interest))
+                                        :degree (x16 / further)))))
+
+(x0 / ease-01
+    :ARG1 (x1 / thing
+              :ARG1-of (x2 / yield-03
+                           :ARG0 (x3 / fund
+                                     :quant 400
+                                     :ARG2-of (x4 / tax-01
+                                                  :ARG2-of (x5 / obligate-01))
+                                     :ARG1-of (x6 / track-down-02
+                                                  :ARG0 (x7 / publication
+                                                            :name (x8 / name
+                                                                      :op1 "Money"
+                                                                      :op2 "Fund"
+                                                                      :op3 "Report")
+                                                            :poss (x9 / organization
+                                                                      :name (x10 / name
+                                                                                 :op1 "IBC")))))
+                           :mod (x11 / temporal-quantity
+                                     :unit (x12 / day)
+                                     :quant 7)
+                           :mod (x13 / compound))
+              :ARG1-of (x14 / average-01))
+    :ARG2 (x15 / fraction
+               :op1 (x16 / percentage-entity
+                         :value 1))
+    :ARG3 (x17 / percentage-entity
+               :value "8.47")
+    :ARG4 (x18 / percentage-entity
+               :value "8.45")
+    :time (x19 / week
+               :ARG1-of (x20 / end-01
+                             :time (x21 / date-entity
+                                        :weekday (x22 / tuesday)))))
+
+(x0 / say-01
+    :ARG0 (x1 / company
+              :name (x2 / name
+                        :op1 "Donoghue"
+                        :op2 "'s"))
+    :ARG1 (x3 / lengthen-01
+              :ARG1 (x4 / maturity
+                        :poss (x5 / thing
+                                  :ARG2-of (x6 / invest-01
+                                               :ARG0 (x7 / fund)))
+                        :ARG1-of (x8 / average-01))
+              :ARG2 (x9 / temporal-quantity
+                        :unit (x10 / day)
+                        :quant 1)
+              :ARG4 (x11 / temporal-quantity
+                         :unit (x12 / day)
+                         :quant 41
+                         :ARG1-of (x13 / have-degree-91
+                                       :ARG2 (x14 / long-03
+                                                  :ARG1 x11)
+                                       :ARG3 (x15 / most)
+                                       :ARG5 (x16 / maturity
+                                                  :time (x17 / since
+                                                             :op1 (x18 / early
+                                                                       :op1 (x19 / date-entity
+                                                                                 :month 8))))))))
+
+(x0 / think-01
+    :ARG1 (x1 / indicate-01
+              :ARG0 (x2 / maturity
+                        :ARG1-of (x3 / have-degree-91
+                                     :ARG2 (x4 / long-03
+                                               :ARG1 x2)
+                                     :ARG3 (x5 / more)))
+              :ARG1 (x6 / decline-01
+                        :ARG1 (x7 / rate
+                                  :mod (x8 / interest)))
+              :ARG1-of (x9 / cause-01
+                           :ARG0 (x10 / permit-01
+                                      :ARG0 x2
+                                      :ARG1 (x11 / retain-01
+                                                 :ARG0 (x12 / person
+                                                            :ARG0-of (x13 / manage-01
+                                                                          :ARG1 (x14 / portfolio)))
+                                                 :ARG1 (x15 / rate
+                                                            :ARG1-of (x16 / have-degree-91
+                                                                          :ARG2 (x17 / high-02
+                                                                                     :ARG1 x15
+                                                                                     :ARG2-of (x18 / relative-05))
+                                                                          :ARG3 (x19 / more)))
+                                                 :duration (x20 / period
+                                                                :ARG1-of (x21 / have-degree-91
+                                                                              :ARG2 (x22 / long-03
+                                                                                         :ARG1 x20)
+                                                                              :ARG3 (x23 / more))))))))
+
+(x0 / consider-01
+    :ARG1 (x1 / signal-07
+              :ARG0 (x2 / maturity
+                        :ARG1-of (x3 / have-degree-91
+                                     :ARG2 (x4 / short-07
+                                               :ARG1 x2)
+                                     :ARG3 (x5 / more)))
+              :ARG1 (x6 / rise-01
+                        :ARG1 (x7 / rate)))
+    :ARG1-of (x8 / cause-01
+                 :ARG0 (x9 / possible-01
+                           :ARG1 (x10 / capture-01
+                                      :ARG0 (x11 / person
+                                                 :ARG0-of (x12 / manage-01
+                                                               :ARG1 (x13 / portfolio)))
+                                      :ARG1 (x14 / rate
+                                                 :ARG1-of (x15 / have-degree-91
+                                                               :ARG2 (x16 / high-02
+                                                                          :ARG1 x14)
+                                                               :ARG3 (x17 / more)))
+                                      :time (x18 / soon
+                                                 :ARG2-of (x19 / have-degree-91
+                                                               :ARG1 x10
+                                                               :ARG3 (x20 / more)))))))
+
+(x0 / reach-01
+    :ARG0 (x1 / maturity
+              :poss (x2 / fund
+                        :ARG1-of (x3 / open-01
+                                     :ARG3 (x4 / institution)
+                                     :mod (x5 / only)))
+              :ARG1-of (x6 / average-01)
+              :ARG0-of (x7 / indicate-01
+                           :ARG1-of (x8 / consider-01
+                                        :ARG0 (x9 / some)
+                                        :ARG1-of (x10 / cause-01
+                                                      :ARG0 (x11 / watch-01
+                                                                 :ARG0 (x12 / person
+                                                                            :mod (x14 / that)
+                                                                            :ARG0-of (x13 / manage-01))
+                                                                 :ARG1 (x15 / market)
+                                                                 :manner (x16 / close-10))))
+                           :ARG1-of (x17 / have-degree-91
+                                         :ARG2 (x18 / strong-02
+                                                    :ARG1 x7)
+                                         :ARG3 (x19 / more))))
+    :ARG1 (x20 / temporal-quantity
+               :unit (x21 / day)
+               :domain (x22 / point
+                            :prep-for (x24 / year)
+                            :ARG1-of (x23 / high-02))
+               :quant 33))
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :name (x2 / name
+                        :op1 "Brenda"
+                        :op2 "Malizia"
+                        :op3 "Negus")
+              :ARG0-of (x3 / have-org-role-91
+                           :ARG1 (x4 / publication
+                                     :name (x5 / name
+                                               :op1 "Money"
+                                               :op2 "Fund"
+                                               :op3 "Report"))
+                           :ARG2 (x6 / editor)))
+    :ARG1 (x7 / possible-01
+              :ARG1 (x8 / blip-00
+                        :ARG1 (x9 / thing
+                                  :ARG1-of (x10 / yield-03))
+                        :mod (x11 / again)
+                        :time (x12 / before
+                                   :op1 (x13 / blip-00
+                                             :ARG1 x9
+                                             :direction (x14 / down)))
+                        :direction (x15 / up)
+                        :ARG1-of (x16 / cause-01
+                                      :ARG0 (x17 / rise-01
+                                                 :ARG1 (x18 / rate
+                                                            :mod (x19 / interest)
+                                                            :duration (x20 / short-07))
+                                                 :time (x21 / recent))))
+              :ARG1-of (x22 / have-concession-91)))
+
+(x0 / rise-01
+    :ARG1 (x1 / thing
+              :ARG1-of (x2 / yield-03
+                           :ARG0 (x3 / bill
+                                     :mod (x4 / government-organization
+                                              :name (x5 / name
+                                                        :op1 "Treasury"))
+                                     :mod (x6 / temporal-quantity
+                                              :unit (x7 / month)
+                                              :quant 6)
+                                     :ARG1-of (x8 / auction-02
+                                                  :time (x9 / date-entity
+                                                            :weekday (x10 / monday))))))
+    :ARG3 (x11 / percentage-entity
+               :value "7.90")
+    :ARG4 (x12 / percentage-entity
+               :value "8.04")
+    :ARG0-of (x13 / exemplify-01))
+
+(x0 / continue-01
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / invest-01))
+    :ARG1 (x3 / pour-01
+              :ARG0 x1
+              :ARG1 (x4 / cash)
+              :ARG3 (x5 / fund
+                        :mod (x6 / money)))
+    :concession (x7 / decline-01
+                    :ARG1 (x8 / thing
+                              :ARG1-of (x9 / yield-03))
+                    :time (x10 / recent)))
+
+(x0 / grow-01
+    :ARG1 (x1 / asset
+              :poss (x2 / fund
+                        :quant 400
+                        :ARG3-of (x3 / tax-01)))
+    :ARG2 (x4 / monetary-quantity
+              :unit (x5 / dollar)
+              :quant 1500000000)
+    :ARG4 (x6 / monetary-quantity
+              :unit (x7 / dollar)
+              :quant 352700000000)
+    :time (x8 / week
+              :mod (x9 / last)))
+
+(x0 / beat-03
+    :ARG0 (x1 / thing
+              :ARG1-of (x2 / yield-03
+                           :ARG0 (x3 / fund
+                                     :mod (x4 / money))))
+    :ARG1 (x5 / thing
+              :ARG1-of (x6 / invest-01
+                           :duration (x7 / short-07))
+              :ARG2-of (x8 / comparable-03
+                           :ARG1 x1))
+    :ARG1-of (x9 / typical-02)
+    :ARG1-of (x10 / cause-01
+                  :ARG0 (x11 / possible-01
+                             :ARG1 (x12 / and
+                                        :op1 (x13 / vary-01
+                                                  :ARG0 (x14 / person
+                                                             :ARG0-of (x15 / manage-01
+                                                                           :ARG1 (x16 / portfolio)))
+                                                  :ARG1 (x17 / maturity))
+                                        :op2 (x18 / go-03
+                                                  :ARG0 x14
+                                                  :ARG1 (x19 / rate
+                                                             :ARG1-of (x20 / have-degree-91
+                                                                           :ARG2 (x21 / high-02
+                                                                                      :ARG1 x19)
+                                                                           :ARG3 (x22 / most))))))))
+
+(x0 / yield-03
+    :ARG0 (x1 / fund
+              :name (x2 / name
+                        :op1 "Dreyfus"
+                        :op2 "World-Wide"
+                        :op3 "Dollar")
+              :ARG0-of (x3 / yield-03
+                           :mod (x4 / top)))
+    :ARG1 (x5 / percentage-entity
+              :value "9.37"
+              :ARG4-of (x6 / decrease-01
+                           :ARG3 (x7 / percentage-entity
+                                     :time (x8 / before
+                                               :quant (x9 / temporal-quantity
+                                                          :unit (x10 / week)
+                                                          :quant 1)
+                                               :op1 (x11 / week
+                                                         :mod (x12 / last)))
+                                     :value "9.45")))
+    :time x11
+    :mod (x13 / temporal-quantity
+              :unit (x14 / day)
+              :quant 7)
+    :mod (x15 / compound))
+
+(x0 / and
+    :op1 (x1 / invest-01
+             :ARG0 (x2 / it)
+             :ARG2 (x3 / security
+                       :location (x6 / overseas)
+                       :ARG1-of (x4 / denominate-01
+                                    :ARG2 (x5 / dollar)))
+             :manner (x7 / heavy))
+    :op2 (x8 / waive-01
+             :ARG0 x2
+             :ARG1 (x9 / fee
+                       :mod (x10 / manage-01))
+             :time (x14 / current)
+             :ARG0-of (x11 / boost-01
+                           :ARG1 (x12 / thing
+                                      :ARG1-of (x13 / yield-03
+                                                    :ARG0 x2)))))
+
+(x0 / yield-03
+    :ARG0 (x1 / fund
+              :quant 400)
+    :ARG1 (x2 / percentage-entity
+              :value "8.12"
+              :ARG4-of (x3 / decrease-01
+                           :ARG3 (x4 / percentage-entity
+                                     :value "8.14")))
+    :mod (x5 / temporal-quantity
+             :unit (x6 / day)
+             :quant 7)
+    :ARG1-of (x7 / simple-02)
+    :ARG1-of (x8 / average-01))
+
+(x0 / and
+    :op1 (x1 / fall-01
+             :ARG1 (x2 / thing
+                       :ARG1-of (x3 / yield-03
+                                    :mod (x4 / temporal-quantity
+                                             :unit (x5 / day)
+                                             :quant 30)
+                                    :ARG1-of (x6 / simple-02)))
+             :ARG3 (x7 / percentage-entity
+                       :value "8.22")
+             :ARG4 (x8 / percentage-entity
+                       :value "8.19"
+                       :ARG2-of (x9 / average-01)))
+    :op2 (x10 / slide-02
+              :ARG1 (x11 / thing
+                         :ARG1-of (x12 / yield-03
+                                       :mod (x13 / temporal-quantity
+                                                 :unit (x14 / day)
+                                                 :quant 30)
+                                       :mod (x15 / compound)))
+              :ARG3 (x16 / percentage-entity
+                         :value "8.56")
+              :ARG4 (x17 / percentage-entity
+                         :value "8.53"
+                         :ARG2-of (x18 / average-01))))
+
+(x0 / elect-01
+    :ARG1 (x1 / person
+              :name (x2 / name
+                        :op1 "J.P."
+                        :op2 "Bolduc")
+              :ARG0-of (x3 / have-org-role-91
+                           :ARG1 (x4 / company
+                                     :name (x5 / name
+                                               :op1 "W.R."
+                                               :op2 "Grace"
+                                               :op3 "&"
+                                               :op4 "Co.")
+                                     :ARG0-of (x6 / hold-01
+                                                  :ARG1 (x7 / interest
+                                                            :quant (x8 / percentage-entity
+                                                                       :value "83.4")
+                                                            :prep-in (x9 / company
+                                                                         :mod (x10 / this)
+                                                                         :mod (x11 / service
+                                                                                   :mod (x12 / energy))))))
+                           :ARG2 (x13 / chairman
+                                      :mod (x14 / vice))))
+    :ARG2 (x15 / director
+               :ARG2-of (x16 / have-org-role-91
+                             :ARG0 x1)))
+
+(x0 / succeed-02
+    :ARG0 (x1 / he)
+    :ARG1 (x2 / person
+              :name (x3 / name
+                        :op1 "Terrence"
+                        :op2 "D."
+                        :op3 "Daniels")
+              :ARG0-of (x4 / resign-01
+                           :ARG1 (x8 / chairman
+                                     :mod (x9 / vice)))
+              :ARG0-of (x5 / have-org-role-91
+                           :ARG1 (x6 / company
+                                     :name (x7 / name
+                                               :op1 "W.R."
+                                               :op2 "Grace"))
+                           :ARG2 x8
+                           :time (x10 / former))))
+
+(x0 / hold-01
+    :ARG0 (x1 / company
+              :name (x2 / name
+                        :op1 "W.R."
+                        :op2 "Grace"))
+    :ARG1 (x3 / seat
+              :quant 3
+              :ARG1-of (x4 / include-91
+                           :ARG2 (x5 / seat
+                                     :mod (x6 / board)
+                                     :poss (x7 / company
+                                               :name (x8 / name
+                                                         :op1 "Grace"
+                                                         :op2 "Energy"))
+                                     :quant 7))))
+
+(x0 / company
+    :name (x1 / name
+              :op1 "Finmeccanica")
+    :prep-with (x4 / interest
+                   :prep-in (x5 / industry
+                                :mod (x6 / engineering
+                                         :mod (x7 / mechanics))))
+    :mod (x8 / country
+             :name (x9 / name
+                       :op1 "Italy"))
+    :mod (x10 / holding)
+    :ARG1-of (x2 / own-01
+                 :ARG0 (x3 / state)))
+
+(x0 / make-01
+    :ARG0 (x1 / company
+              :name (x2 / name
+                        :op1 "Bailey"
+                        :op2 "Controls")
+              :ARG1-of (x3 / base-01
+                           :location (x4 / city
+                                         :name (x5 / name
+                                                   :op1 "Wickliffe")
+                                         :location (x6 / state
+                                                       :name (x7 / name
+                                                                 :op1 "Ohio")))))
+    :ARG1 (x8 / system
+              :mod (x10 / industry)
+              :ARG1-of (x9 / computerize-01)
+              :ARG2-of (x11 / control-01)))
+
+(x0 / and
+    :op1 (x1 / employ-01
+             :ARG0 (x2 / it)
+             :ARG1 (x3 / person
+                       :quant 2700))
+    :op2 (x4 / have-03
+             :ARG0 x2
+             :ARG1 (x5 / revenue
+                       :quant (x6 / rate-entity-91
+                                  :ARG1 (x7 / about
+                                            :op1 (x8 / monetary-quantity
+                                                     :unit (x9 / dollar)
+                                                     :quant 370000000))
+                                  :ARG2 (x10 / temporal-quantity
+                                             :unit (x11 / year)
+                                             :quant 1)))))
+
+(x0 / suspend-01
+    :ARG0 (x1 / government-organization
+              :mod (x3 / federal)
+              :ARG0-of (x2 / govern-01))
+    :ARG1 (x4 / sell-01
+              :ARG1 (x5 / bond
+                        :mod (x6 / savings)
+                        :mod (x7 / country
+                                 :name (x8 / name
+                                           :op1 "U.S."))))
+    :ARG1-of (x9 / cause-01
+                 :ARG0 (x10 / lift-01
+                            :ARG0 (x11 / government-organization
+                                       :name (x12 / name
+                                                  :op1 "Congress"))
+                            :ARG1 (x13 / ceiling
+                                       :prep-on (x14 / debt
+                                                     :mod (x15 / government-organization
+                                                               :ARG0-of (x16 / govern-01))))
+                            :polarity -)))
+
+(x0 / say-01
+    :ARG0 (x1 / government-organization
+              :name (x2 / name
+                        :op1 "Treasury"))
+    :ARG1 (x3 / authorize-01
+              :ARG1 (x4 / issue-01
+                        :ARG1 (x5 / obligation
+                                  :mod (x6 / debt)
+                                  :mod (x8 / kind
+                                           :mod (x9 / any))
+                                  :ARG1-of (x7 / new-01))
+                        :ARG0 (x10 / government-organization
+                                   :ARG0-of (x11 / govern-01)))
+              :ARG2 x10
+              :time (x12 / until
+                         :op1 (x13 / act-02
+                                   :ARG0 (x14 / government-organization
+                                              :name (x15 / name
+                                                         :op1 "Congress"))))
+              :polarity -))
+
+(x0 / drop-01
+    :ARG1 (x1 / thing
+              :ARG1-of (x2 / borrow-01
+                           :ARG0 (x4 / government-organization
+                                     :ARG0-of (x5 / govern-01))
+                           :ARG1-of (x3 / authorize-01
+                                        :ARG2 x4)))
+    :ARG3 (x6 / monetary-quantity
+              :unit (x7 / dollar)
+              :quant 2870000000000)
+    :ARG4 (x8 / monetary-quantity
+              :unit (x9 / dollar)
+              :quant 2800000000000)
+    :time (x10 / date-entity
+               :weekday (x11 / wednesday)
+               :time "0:00"))
+
+(x0 / ensnarl-01
+    :ARG1 (x1 / legislate-01
+              :ARG1 (x2 / lift-01
+                        :ARG1 (x3 / ceiling
+                                  :mod (x4 / debt))))
+    :ARG2 (x5 / fight-01
+              :ARG2 (x6 / cut-02
+                        :ARG1 (x7 / thing
+                                  :ARG1-of (x8 / tax-01
+                                               :ARG3 (x9 / thing
+                                                         :ARG1-of (x10 / gain-02
+                                                                       :mod (x11 / capital))))))))
+
+(x0 / contrast-01
+    :ARG1 (x1 / vote-01
+              :ARG0 (x2 / government-organization
+                        :name (x3 / name
+                                  :op1 "House"))
+              :ARG1 (x4 / raise-01
+                        :ARG1 (x5 / ceiling)
+                        :ARG4 (x6 / monetary-quantity
+                                  :unit (x7 / dollar)
+                                  :quant 3100000000000)))
+    :ARG2 (x8 / expect-01
+              :ARG1 (x9 / act-02
+                        :ARG0 (x10 / government-organization
+                                   :name (x11 / name
+                                              :op1 "Senate"))
+                        :time (x12 / before
+                                   :op1 (x13 / week
+                                             :mod (x14 / next)))
+                        :polarity -)))
+
+(x0 / say-01
+    :ARG0 (x1 / government-organization
+              :name (x2 / name
+                        :op1 "Treasury"))
+    :ARG1 (x3 / default-01
+              :ARG1 (x4 / country
+                        :name (x5 / name
+                                  :op1 "U.S."))
+              :time (x6 / date-entity
+                        :month 11
+                        :day 9)
+              :condition (x7 / act-02
+                             :ARG0 (x8 / government-organization
+                                       :name (x9 / name
+                                                 :op1 "Congress"))
+                             :time (x10 / by
+                                        :op1 x6)
+                             :polarity -)))
+
+(x0 / name-03
+    :ARG1 (x1 / person
+              :name (x2 / name
+                        :op1 "Clark"
+                        :op2 "J."
+                        :op3 "Vitulli"))
+    :ARG2 (x3 / and
+              :op1 (x4 / president
+                       :mod (x5 / vice)
+                       :mod (x6 / senior))
+              :op2 (x7 / person
+                       :mod (x9 / general)
+                       :ARG0-of (x8 / manage-01
+                                    :ARG1 (x11 / arm
+                                               :mod (x12 / this)
+                                               :mod (x19 / country
+                                                         :name (x20 / name
+                                                                    :op1 "U.S."))
+                                               :part-of (x13 / company
+                                                             :name (x14 / name
+                                                                        :op1 "Mazda"
+                                                                        :op2 "Motor"
+                                                                        :op3 "Corp")
+                                                             :mod (x15 / country
+                                                                       :name (x16 / name
+                                                                                  :op1 "Japan"))
+                                                             :ARG0-of (x17 / make-01
+                                                                           :ARG1 (x18 / auto)))
+                                               :ARG0-of (x21 / sell-01)
+                                               :ARG0-of (x22 / market-01))))
+              :ARG2-of (x10 / have-org-role-91
+                            :ARG0 x1
+                            :ARG1 x11)))
+
+(x0 / oversee-01
+    :ARG0 (x1 / he)
+    :ARG1 (x2 / and
+              :op1 (x3 / operation
+                       :ARG0-of (x4 / sell-01))
+              :op2 (x5 / operation
+                       :mod (x6 / service-05))
+              :op3 (x7 / operation
+                       :mod (x8 / part))
+              :op4 (x9 / operation
+                       :ARG0-of (x10 / market-01))
+              :poss (x11 / company
+                         :name (x12 / name
+                                    :op1 "Mazda"))
+              :mod (x13 / country
+                        :name (x14 / name
+                                   :op1 "U.S.")))
+    :ARG3-of (x15 / have-org-role-91
+                  :ARG0 x1
+                  :ARG2 (x16 / position
+                             :ARG1-of (x17 / new-02
+                                           :ARG2 x1))))
+
+(x0 / person
+    :name (x1 / name
+              :op1 "Mr."
+              :op2 "Vitulli")
+    :age (x11 / temporal-quantity
+              :unit (x12 / year)
+              :quant 43)
+    :ARG0-of (x2 / have-org-role-91
+                 :ARG1 (x3 / division
+                           :name (x4 / name
+                                     :op1 "Chrysler")
+                           :part-of (x5 / company
+                                        :name (x6 / name
+                                                  :op1 "Chrysler"
+                                                  :op2 "Corp.")))
+                 :ARG3 (x7 / manage-01
+                           :ARG0 x0
+                           :ARG1 (x8 / market-01)
+                           :mod (x9 / general))
+                 :time (x10 / previous)))
+
+(x0 / have-org-role-91
+    :ARG0 (x1 / he)
+    :ARG1 (x2 / company
+              :name (x3 / name
+                        :op1 "Chrysler"))
+    :ARG2 (x4 / executive
+              :topic (x5 / and
+                         :op1 (x6 / sell-01)
+                         :op2 (x7 / market-01)))
+    :duration (x8 / temporal-quantity
+                  :unit (x9 / year)
+                  :quant 20))
+
+(x0 / jet-off-01
+    :ARG1 (x1 / titan
+              :mod (x3 / nation)
+              :ARG0-of (x2 / manufacture-01))
+    :ARG2 (x4 / town
+              :mod (x5 / resort)
+              :example (x6 / and
+                           :op1 (x7 / city
+                                    :name (x8 / name
+                                              :op1 "Boca"
+                                              :op2 "Raton"))
+                           :op2 (x9 / city
+                                    :name (x10 / name
+                                               :op1 "Hot"
+                                               :op2 "Springs")))
+              :ARG2-of (x11 / confine-01
+                            :mod (x12 / sunny)))
+    :time (x14 / powwow
+               :poss x1
+               :frequency (x15 / rate-entity-91
+                               :ARG2 (x16 / temporal-quantity
+                                          :unit (x17 / year)
+                                          :quant 1)
+                               :ARG1 2))
+    :ARG1-of (x13 / typical-02))
+
+(x0 / year
+    :mod (x1 / this)
+    :polarity -)
+
+(x0 / settle-01
+    :ARG0 (x1 / organization
+              :name (x2 / name
+                        :op1 "National"
+                        :op2 "Association"
+                        :op3 "of"
+                        :op4 "Manufacturers"))
+    :ARG1 (x3 / meet-03
+              :ARG0 (x4 / board
+                        :part-of x1)
+              :time (x5 / date-entity
+                        :season (x6 / fall))
+              :location (x7 / city
+                            :name (x8 / name
+                                      :op1 "Indianapolis")
+                            :ARG0-of (x9 / have-org-role-91
+                                         :ARG1 (x10 / state
+                                                    :name (x11 / name
+                                                               :op1 "Indiana"))
+                                         :ARG2 (x12 / capital)))))
+
+(x0 / receive-01
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / have-org-role-91
+                           :ARG1 (x3 / and
+                                     :op1 (x4 / giant
+                                              :example (x5 / and
+                                                           :op1 (x6 / company
+                                                                    :name (x7 / name
+                                                                              :op1 "Du"
+                                                                              :op2 "Pont"))
+                                                           :op2 (x8 / company
+                                                                    :name (x9 / name
+                                                                              :op1 "Maytag"))))
+                                     :op2 (x10 / company
+                                               :example (x14 / and
+                                                             :op1 (x15 / company
+                                                                       :name (x16 / name
+                                                                                  :op1 "Trojan"
+                                                                                  :op2 "Steel"))
+                                                             :op2 (x17 / company
+                                                                       :name (x18 / name
+                                                                                  :op1 "Valley"
+                                                                                  :op2 "Queen"
+                                                                                  :op3 "Cheese"
+                                                                                  :op4 "Factory")))
+                                               :ARG1-of (x11 / have-degree-91
+                                                             :ARG2 (x12 / know-02
+                                                                        :ARG1 x10)
+                                                             :ARG3 (x13 / less))))
+                           :ARG2 (x19 / official)))
+    :ARG1 (x20 / thing
+               :ARG1-of (x21 / message-01)))
+
+(x0 / join-04
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / have-org-role-91
+                           :ARG2 (x3 / executive)))
+    :ARG1 (x4 / person
+              :name (x5 / name
+                        :op1 "William"
+                        :op2 "H."
+                        :op3 "Hudnut"
+                        :op4 "III")
+              :ARG0-of (x6 / have-org-role-91
+                           :ARG2 (x7 / mayor)))
+    :ARG2 (x8 / evening
+              :poss (x9 / and
+                        :op1 (x10 / organization
+                                  :name (x11 / name
+                                             :op1 "Indianapolis"
+                                             :op2 "Symphony"
+                                             :op3 "Orchestra"))
+                        :op2 (x12 / person
+                                  :name (x13 / name
+                                             :op1 "Victor"
+                                             :op2 "Borge")
+                                  :mod (x14 / person
+                                            :ARG0-of (x15 / play-11
+                                                          :ARG2 (x16 / piano)))
+                                  :mod (x17 / comedian)
+                                  :mod (x18 / guest))))
+    :prep-for (x19 / starter))
+
+(x0 / follow-01
+    :ARG1 (x1 / and
+              :op1 (x2 / champagne)
+              :op2 (x3 / dessert)))
+
+(x0 / possible-01
+    :ARG1 (x1 / make-it-14
+              :ARG0 (x2 / person
+                        :ARG0-of (x3 / have-org-role-91
+                                     :ARG2 (x4 / governor))))
+    :polarity -
+    :ARG0-of (x5 / cause-01
+                 :ARG1 (x6 / welcome-01
+                           :ARG0 (x7 / person
+                                     :ARG0-of (x8 / have-org-role-91
+                                                  :ARG2 (x9 / governor
+                                                            :mod (x10 / lieutenant))))
+                           :ARG1 (x11 / guest
+                                      :ARG1-of (x12 / special-02)))))
+
+(x0 / hold-04
+    :ARG1 (x1 / breakfast-01
+              :mod (x2 / buffet))
+    :location (x3 / museum
+                  :location-of (x4 / ban-01
+                                   :ARG1 (x5 / and
+                                             :op1 (x6 / food)
+                                             :op2 (x7 / drink))
+                                   :ARG2 (x8 / person
+                                             :mod (x10 / everyday)
+                                             :ARG0-of (x9 / visit-01)))))
+
+(x0 / haul-out-03
+    :ARG0 (x1 / speedway)
+    :ARG1 (x2 / and
+              :op1 (x3 / person
+                       :quant 4
+                       :ARG0-of (x4 / drive-01))
+              :op2 (x5 / crew)
+              :op3 (x6 / person
+                       :mod (x8 / event
+                                :name (x9 / name
+                                          :op1 "Indianapolis"
+                                          :op2 "500"))
+                       :mod (x10 / official)
+                       :mod (x11 / even)
+                       :ARG0-of (x7 / announce-01)))
+    :purpose (x12 / race-02
+                  :mod (x13 / lap
+                            :quant 10)
+                  :ARG1-of (x14 / exhibit-01))
+    :time (x15 / then)
+    :ARG3-of (x16 / honor-01
+                  :ARG1 (x17 / guest)))
+
+(x0 / drool-02
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / have-org-role-91
+                           :ARG1 (x3 / company
+                                     :mod (x4 / thing
+                                              :name (x5 / name
+                                                        :op1 "Fortune"
+                                                        :op2 "500")))
+                           :ARG2 (x6 / executive)))
+    :ARG1 (x7 / and
+              :op1 (x8 / car)
+              :op2 (x9 / person
+                       :ARG0-of (x10 / drive-01)))
+    :time (x11 / after
+               :op1 (x12 / race-02))
+    :ARG1-of (x13 / resemble-01
+                  :ARG2 (x14 / drool-02
+                             :ARG0 (x15 / schoolboy))))
+
+(x0 / squeeze-02
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / have-org-role-91
+                           :ARG2 (x3 / executive)))
+    :ARG1 (x4 / meet-03
+              :location (x5 / hotel)
+              :quant (x6 / few))
+    :time (x7 / before
+              :op1 (x8 / board-01
+                       :ARG0 x1
+                       :ARG1 (x9 / bus)
+                       :mod (x10 / again)))
+    :location (x11 / downtown
+                   :mod (x12 / back)))
+
+(x0 / have-purpose-91
+    :ARG1 (x1 / it)
+    :ARG2 (x2 / and
+              :op1 (x3 / dinner)
+              :op2 (x4 / dance-01)
+              :location (x5 / relative-position
+                            :quant (x6 / block)))
+    :time (x7 / time
+              :mod (x8 / this)))
+
+(x0 / feed-01
+    :ARG0 (x1 / chef
+              :quant 9
+              :ARG1-of (x2 / include-91
+                           :ARG2 (x3 / chef
+                                     :ARG1-of (x4 / have-degree-91
+                                                  :ARG2 (x5 / hot-03
+                                                            :ARG1 x3)
+                                                  :ARG3 (x6 / most)
+                                                  :ARG5 (x7 / chef
+                                                            :location (x8 / town))))))
+    :ARG1 (x9 / and
+              :op1 (x10 / mousseline
+                        :mod (x11 / duckling)
+                        :mod (x12 / state
+                                  :name (x13 / name
+                                             :op1 "Indiana")))
+              :op2 (x14 / consomme
+                        :mod (x15 / lobster))
+              :op3 (x16 / mignon
+                        :part-of (x17 / veal))
+              :op4 (x18 / terrine
+                        :mod (x19 / chocolate)
+                        :accompanier (x20 / sauce
+                                          :mod (x21 / raspberry))))
+    :ARG2 (x22 / they)
+    :location (x23 / under
+                   :op1 (x24 / and
+                             :op1 (x25 / star)
+                             :op2 (x26 / moon)
+                             :part-of (x27 / ballroom
+                                           :name (x28 / name
+                                                      :op1 "Indiana"
+                                                      :op2 "Roof")
+                                           :ARG1-of (x29 / renovate-01)))))
+
+(x0 / ovation-01
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / have-org-role-91
+                           :ARG2 (x3 / executive)))
+    :ARG1 (x4 / chef)
+    :ARG2 (x5 / know-04
+              :ARG0 x1
+              :ARG1 (x6 / meal
+                        :mod (x7 / tasty)
+                        :ARG1-of (x8 / free-03))
+              :time (x9 / eat-01
+                        :ARG0 x1
+                        :ARG1 x6))
+    :manner (x10 / stand-01
+                 :ARG1 x1))
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :quant (x6 / more-than
+                         :op1 (x7 / few))
+              :ARG0-of (x2 / have-org-role-91
+                           :ARG2 (x3 / officer
+                                     :mod (x4 / executive)
+                                     :mod (x5 / chief))))
+    :ARG1 (x8 / tempt-01
+              :ARG1 x1
+              :ARG2 (x9 / treat-01
+                        :manner (x10 / carpet
+                                     :ARG1-of (x11 / red-02)))
+              :ARG3 (x12 / return-01
+                         :ARG1 x1
+                         :ARG4 (x13 / city
+                                    :location (x14 / heartland))
+                         :purpose (x15 / meet-03
+                                       :time (x16 / future)))))
+
+(x0 / contrast-01
+    :ARG2 (x1 / look-forward-03
+              :ARG0 (x2 / they)
+              :ARG1 (x3 / meet-03
+                        :ARG0 x2
+                        :time (x4 / date-entity
+                                  :season (x5 / winter))
+                        :location (x6 / city
+                                      :name (x7 / name
+                                                :op1 "Boca"))
+                        :time (x8 / date-entity
+                                  :month 2))
+              :time (x9 / now)))
+
+(x0 / say-01
+    :ARG0 (x1 / figure
+              :source (x2 / government-organization
+                          :ARG0-of (x3 / govern-01))
+              :ARG1-of (x4 / release-01
+                           :ARG0 x2
+                           :time (x5 / date-entity
+                                     :weekday (x6 / wednesday))))
+    :ARG1 (x7 / register-02
+              :ARG0 (x8 / country
+                        :name (x9 / name
+                                  :op1 "South"
+                                  :op2 "Korea"))
+              :ARG1 (x10 / deficit
+                         :mod (x11 / trade-01)
+                         :quant (x12 / monetary-quantity
+                                     :unit (x13 / dollar)
+                                     :quant 101000000)
+                         :ARG1-of (x14 / reflect-01
+                                       :ARG2 (x15 / sluggish
+                                                  :domain (x16 / economy
+                                                               :poss x8))))
+              :time (x17 / date-entity
+                         :month 10)))
+
+(x0 / show-01
+    :ARG0 (x1 / tally-01
+              :ARG0 (x2 / government-organization
+                        :name (x3 / name
+                                  :op1 "Trade"
+                                  :op2 "and"
+                                  :op3 "Industry"
+                                  :op4 "Ministry"))
+              :mod (x4 / preliminary))
+    :ARG1 (x5 / deficit
+              :mod (x6 / trade-01)
+              :mod (x7 / another)
+              :mod (x8 / setback
+                       :ord (x9 / ordinal-entity
+                                :range (x10 / year
+                                            :mod (x11 / this))
+                                :value 5)
+                       :frequency (x12 / rate-entity-91
+                                       :ARG2 (x13 / temporal-quantity
+                                                  :unit (x14 / month)
+                                                  :quant 1)
+                                       :ARG1 1))
+              :time (x22 / date-entity
+                         :month 10)
+              :ARG0-of (x15 / cast-01
+                            :ARG1 (x16 / cloud)
+                            :ARG2 (x17 / economy
+                                       :poss (x20 / country
+                                                  :name (x21 / name
+                                                             :op1 "South"
+                                                             :op2 "Korea"))
+                                       :ARG1-of (x18 / orient-01
+                                                     :ARG2 (x19 / export-01))))))
+
+(x0 / stop-01
+    :ARG1 (x1 / boom-02
+              :ARG0 (x2 / economy
+                        :poss (x3 / country
+                                  :name (x4 / name
+                                            :op1 "South"
+                                            :op2 "Korea")))
+              :ARG1-of (x5 / begin-01
+                           :time (x6 / date-entity
+                                     :year 1986)))
+    :time (x7 / year
+              :mod (x8 / this))
+    :ARG1-of (x9 / cause-01
+                 :ARG0 (x10 / and
+                            :op1 (x11 / dispute-01
+                                      :ARG2 (x12 / labor)
+                                      :ARG1-of (x13 / prolong-01))
+                            :op2 (x14 / conflict-01
+                                      :ARG2 (x15 / trade-01))
+                            :op3 (x16 / export-01
+                                      :mod (x17 / sluggish)))))
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :ARG0-of (x2 / have-org-role-91
+                           :ARG1 (x3 / government-organization
+                                     :ARG0-of (x4 / govern-01))
+                           :ARG2 (x5 / official)))
+    :ARG1 (x6 / remain-01
+              :ARG1 (x7 / thing
+                        :time (x9 / end-01
+                                  :ARG1 (x10 / year))
+                        :ARG1-of (x8 / export-01))
+              :ARG3 (x11 / under
+                         :op1 (x12 / monetary-quantity
+                                   :unit (x13 / dollar)
+                                   :quant 68000000000
+                                   :ARG1-of (x14 / target-01
+                                                 :ARG0 x3)))))
+
+(x0 / record-01
+    :ARG0 (x1 / country
+              :name (x2 / name
+                        :op1 "South"
+                        :op2 "Korea"))
+    :ARG1 (x3 / surplus
+              :mod (x4 / trade-01)
+              :quant (x5 / monetary-quantity
+                         :unit (x6 / dollar)
+                         :quant 71000000)
+              :time (x7 / so-far
+                        :mod (x8 / year
+                                 :mod (x9 / this))))
+    :concession (x10 / thing
+                     :mod (x12 / gloomy)
+                     :ARG1-of (x11 / forecast-01)))
+
+(x0 / increase-01
+    :ARG1 (x1 / thing
+              :ARG1-of (x2 / export-01
+                           :ARG0 (x3 / nation))
+              :ARG1-of (x4 / accumulate-01))
+    :ARG2 (x5 / percentage-entity
+              :value 4)
+    :ARG3 (x6 / monetary-quantity
+              :time (x7 / date-interval
+                        :op1 (x8 / date-entity
+                                 :mod (x9 / year
+                                          :mod (x10 / last))
+                                 :month 1)
+                        :op2 (x11 / date-entity
+                                  :mod x9
+                                  :month 10)))
+    :ARG4 (x12 / monetary-quantity
+               :unit (x13 / dollar)
+               :time (x14 / date-interval
+                          :op1 (x15 / date-entity
+                                    :month 1)
+                          :op2 (x16 / date-entity
+                                    :month 10))
+               :quant 50450000000))
+
+(x0 / up-02
+    :ARG1 (x1 / thing
+              :ARG1-of (x2 / import-01))
+    :ARG2 (x3 / percentage-entity
+              :value 19)
+    :ARG4 (x4 / monetary-quantity
+              :unit (x5 / dollar)
+              :quant 50380000000))
+
+(x0 / plan
+    :domain (x1 / plan
+                :mod (x3 / advertise-01)
+                :source (x4 / magazine
+                            :name (x5 / name
+                                      :op1 "Newsweek")
+                            :part-of (x6 / newspaper
+                                         :name (x7 / name
+                                                   :op1 "Washington"
+                                                   :op2 "Post"
+                                                   :op3 "Co.")))
+                :ARG1-of (x2 / new-01))
+    :ord (x12 / ordinal-entity
+              :range (x13 / temporal-quantity
+                          :unit (x14 / year)
+                          :quant 3)
+              :value 2)
+    :ARG1-of (x8 / offer-01
+                 :ARG0 x4
+                 :ARG3 (x9 / company
+                           :ARG0-of (x10 / advertise-01)))
+    :ARG0-of (x11 / incentivize-01))
+
+(x0 / say-01
+    :ARG0 (x1 / person
+              :name (x2 / name
+                        :op1 "Alan"
+                        :op2 "Spoon")
+              :ARG1-of (x3 / name-03
+                           :ARG2 (x4 / president
+                                     :ARG2-of (x5 / have-org-role-91
+                                                  :ARG0 x1
+                                                  :ARG1 (x6 / magazine
+                                                            :name (x7 / name
+                                                                      :op1 "Newsweek"))))
+                           :time (x8 / recent)))
+    :ARG1 (x9 / increase-01
+              :ARG0 x6
+              :ARG1 (x10 / rate
+                         :poss x6
+                         :mod (x11 / advertise-01))
+              :ARG2 (x12 / percentage-entity
+                         :value 5)
+              :time (x13 / date-entity
+                         :month 1)))
+
+(x0 / cost-01
+    :ARG1 (x1 / page
+              :mod (x2 / color
+                       :quant 4)
+              :mod (x3 / full)
+              :part-of (x4 / magazine
+                           :name (x5 / name
+                                     :op1 "Newsweek")))
+    :ARG2 (x6 / monetary-quantity
+              :unit (x7 / dollar)
+              :quant 100980))

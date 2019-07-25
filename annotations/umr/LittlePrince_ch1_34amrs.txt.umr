@@ -1,0 +1,902 @@
+# ::umr
+(u1 / utterance
+    :info-source (a / author)
+    :snt0 (s1 / sentence-91
+              :assert (s35 / see-01
+                           :doclink "s0-s")
+              :ref (i1 / i
+                       :doclink "s0-i"
+                       :coref a)
+              :ref (b1 / book
+                       :doclink "s0-b2")
+              :contained-by (t1 / time
+                                :contains (a1 / age-01
+                                              :doclink "s0-a"))
+              :ref (p3 / picture
+                       :doclink "s0-p"))
+    :snt1 (s2 / sentence-91
+              :ref (i2 / it
+                       :coref p3)
+              :assert (p1 / picture
+                          :doclink "s1-p"
+                          :assert (s36 / swallow-01
+                                       :doclink "s1-s")
+                          :ref (a2 / animal
+                                   :doclink "s1-a")
+                          :info-source i2))
+    :snt2 (s3 / sentence-91
+              :assert (c1 / copy-01
+                          :doclink "s2-c")
+              :ref (p2 / picture
+                       :doclink "s2-p"
+                       :coref p3)
+              :ref (t3 / thing
+                       :doclink "s2-t2"))
+    :snt3 (s4 / sentence-91
+              :assert (s38 / say-01
+                           :doclink "s3-s2"
+                           :assert (g1 / generalization
+                                       :assert (s37 / swallow-01
+                                                    :doclink "s3-s")
+                                       :ref (p5 / prey
+                                                :doclink "s3-p")
+                                       :ref (b3 / boa
+                                                :doclink "s3-b")
+                                       :deny (c2 / chew-01
+                                                 :doclink "s3-c2"))
+                           :inf-source (b2 / book
+                                           :doclink "s3-b2"
+                                           :coref b1))
+              :ref (b4 / book
+                       :doclink "s3-b2"
+                       :coref b1))
+    :snt4 (s5 / sentence-91
+              :assert (g2 / generalization
+                          :assert (s40 / sleep-01
+                                       :doclink "s4-s")
+                          :assert (n1 / need-01
+                                      :doclink "s4-n")
+                          :assert (d2 / digest-01
+                                      :doclink "s4-d")
+                          :subevent-of g1))
+    :snt5 (s6 / sentence-91
+              :assert (p4 / ponder-01
+                          :doclink "s5-p"
+                          :assert s38))
+    :snt6 (s7 / sentence-91
+              :assert (s39 / succeed-01
+                           :doclink "s6-s")
+              :assdert (w1 / work-01
+                           :doclink "s6-w"
+                           :assert (m1 / make-01
+                                       :doclink "s6-m"))
+              :assert m1
+              :ref (p6 / picture
+                       :doclink "s6-p2")
+              :ref (i4 / i
+                       :doclink "s6-i"
+                       :coref a))
+    :snt7 (s8 / sentence-91
+              :ref (p7 / picture
+                       :doclink "s7-p"
+                       :coref p6)
+              :ref (i3 / i
+                       :doclink "s7-i"
+                       :coref a))
+    :snt8 (s9 / sentence-91
+              :assert (l1 / look-02
+                          :doclink "s8-l")
+              :assert (s41 / show-01
+                           :doclink "s8-s"
+                           :after m1)
+              :assert (a3 / ask-01
+                          :doclink "s8-a2"
+                          :neut (f2 / frighten-01
+                                    :doclink "s8-f")
+                          :subevent s41)
+              :ref (i6 / it
+                       :doclink "s8-i"
+                       :coref p7)
+              :ref (i5 / i
+                       :doclink "s8-i2"
+                       :coref a)
+              :ref (g3 / grown-up
+                       :doclink "s8-g"))
+    :snt9 (s10 / sentence-91
+               :assert (a4 / answer-01
+                           :doclink "s9-a"
+                           :neut (f1 / frighten-01
+                                     :doclink "s9-f")
+                           :info-source (t2 / they
+                                            :doclink "s9-t"
+                                            :ref g3))
+               :ref t2)
+    :snt10 (s11 / sentence-91
+                :info-source t2
+                :neut (f3 / frighten-01
+                          :doclink "s10-f"
+                          :coref f1)
+                :ref (h1 / hat
+                         :doclink "s10-h")
+                :request-info (a5 / amr-unknown
+                                  :doclink "s10-a2"))
+    :snt11 (s12 / sentence-91
+                :deny (p9 / picture-01
+                          :doclink "s11-p")
+                :ref (p8 / picture
+                         :doclink "s11-p2"
+                         :coref p7)
+                :ref (h2 / hat
+                         :doclink "s11-h")
+                :ref (i7 / i
+                         :doclink "s11-i"
+                         :coref a))
+    :snt12 (s13 / sentence-91
+                :assert (p10 / picture-01
+                             :doclink "s12-p"
+                             :assert (d1 / digest-01
+                                         :doclink "s12-d")
+                             :ref (e1 / elephant
+                                      :doclink "s12-e")
+                             :ref (b5 / boa
+                                      :doclink "s12-b2")
+                             :info-source (i8 / it
+                                              :doclink "s12-i"
+                                              :coref p8))
+                :ref i8)
+    :snt13 (s14 / sentence-91
+                :deny (u2 / understand-01
+                          :doclink "s13-u"
+                          :after a4)
+                :ref (g4 / grown-up
+                         :doclink "s13-g")
+                :ref (i9 / it
+                         :doclink "s13-i2"
+                         :coref i8)
+                :assert (d3 / draw-01
+                            :doclink "s13-d"
+                            :after u2)
+                :assert-prob (s42 / see-01
+                                  :doclink "s13-s")
+                :ref (p12 / picture
+                          :doclink "s13-p2"))
+    :snt14 (s15 / sentence-91
+                :assert (g5 / generalization
+                            :ref (t4 / they
+                                     :doclink "s14-t"
+                                     :coref g4)
+                            :assert (e2 / explain-01
+                                        :doclink "s14-e")
+                            :assert (n2 / need-01
+                                        :doclink "s14-n")))
+    :snt15 (s16 / sentence-91
+                :assert (l2 / look-02
+                            :doclink "s15-l")
+                :ref (p11 / picture
+                          :doclink "s15-p"
+                          :coref p12)
+                :assert (r1 / respond-01
+                            :doclink "s15-r")
+                :assert (a6 / advise-01
+                            :doclink "s15-a"
+                            :subevent-of r1
+                            :deont-pos (l3 / lay-01
+                                           :doclink "s15-l2")
+                            :deont-pos (d4 / devote-01
+                                           :doclink "s15-d3")))
+    :snt16 (s17 / sentence-91
+                :assert (g6 / give-up-07
+                            :doclink "s16-g"
+                            :time-of (t5 / time
+                                         :coref t1)
+                            :cause a6)
+                :neut (c4 / career
+                          :doclink "s16-c")
+                :ref (i10 / i
+                          :doclink "s16-i"
+                          :coref a))
+    :snt17 (s18 / sentence-91
+                :assert (d5 / dishearten-01
+                            :doclink "s17-d"
+                            :subevent g6)
+                :assert (f4 / fail-01
+                            :doclink "s17-f"
+                            :before u1))
+    :snt18 (s19 / sentence-91
+                :assert (g7 / generalization
+                            :deny (u3 / understand-01
+                                      :doclink "s18-u")
+                            :ref (g9 / grown-up
+                                     :doclink "s18-g")
+                            :ref (a7 / anything
+                                     :doclink "s18-a3"))
+                :assert (g8 / generlization
+                            :ref (c3 / child
+                                     :doclink "s18-c")
+                            :ref g9
+                            :neces-pos (e3 / explain-01
+                                           :doclink "s18-e")
+                            :assert (t6 / tiresome
+                                        :doclink "s18-t")))
+    :snt19 (s20 / sentence-91
+                :assert (c6 / choose-01
+                            :doclink "s19-c"
+                            :cause g6)
+                :assert (l4 / learn-01
+                            :doclink "s19-l"
+                            :cause c6
+                            :neut (p13 / pilot-01
+                                       :doclink "s19-p2"
+                                       :ref (a8 / airplane
+                                                :doclink "s19-a3")))
+                :ref (i11 / i
+                          :doclink "s19-i"
+                          :coref a))
+    :snt20 (s21 / sentence-91
+                :assert (f5 / fly-01
+                            :doclink "s20-f"
+                            :subevent (u4 / useful-05
+                                          :doclink "s20-u"))
+                :ref (i12 / i
+                          :doclink "s20-i"
+                          :coref a)
+                :ref (p14 / part
+                          :doclink "s20-p2"))
+    :snt21 (s22 / sentence-91
+                :assert-possible (d6 / distinguish-01
+                                     :doclink "s21-d")
+                :ref (i13 / i
+                          :doclink "s21-i"
+                          :coref a)
+                :ref (c5 / country
+                         :doclink "s21-c")
+                :ref (s43 / state
+                          :doclink "s21-s"))
+    :snt22 (s23 / sentence-91
+                :assert (g10 / generalization
+                             :condition (l5 / lost
+                                            :doclink "s22-l")
+                             :assert (v1 / value-02
+                                         :doclink "s22-v")))
+    :snt23 (s24 / sentence-91
+                :assert (e4 / encounter-01
+                            :doclink "s23-e")
+                :ref (i14 / i
+                          :doclink "s23-i"
+                          :coref a)
+                :ref (p15 / person
+                          :doclink "s23-p"))
+    :snt24 (s25 / sentence-91
+                :assert (l6 / live-01
+                            :doclink "s24-l")
+                :ref (i16 / i
+                          :doclink "s24-i"
+                          :coref a)
+                :ref (g11 / grown-up
+                          :doclink "s24-g"))
+    :snt25 (s26 / sentence-91
+                :assert (s44 / see-01
+                             :doclink "s25-s"
+                             :subevent-of l6)
+                :ref (t7 / they
+                         :doclink "s25-t"
+                         :coref g11)
+                :ref (i15 / i
+                          :doclink "s25-i"
+                          :coref i16))
+    :snt26 (s27 / sentence-91
+                :deny (i17 / improve-01
+                           :doclink "s26-i")
+                :ref (i18 / i
+                          :doclink "s26-i2")
+                :ref (t8 / they
+                         :doclink "s26-t2"
+                         :coref g11)
+                :ref (t9 / that
+                         :doclink "s26-t"
+                         :coref s44))
+    :snt27 (s28 / sentence-91
+                :assert (g12 / generalization
+                             :condition (m3 / meet-02
+                                            :doclink "s27-m")
+                             :assert (t10 / try-01
+                                          :doclink "s27-t")
+                             :assert (e5 / experiment-01
+                                         :doclink "s27-e"
+                                         :subevent (s45 / show-01
+                                                        :doclink "s27-s"))
+                             :ref (p16 / person
+                                       :doclink "s27-p"))
+                :ref (i19 / i
+                          :doclink "s27-i"
+                          :coref a)
+                :ref (t11 / they
+                          :doclink "s27-t3"
+                          :coref g11)
+                :ref (p17 / picture
+                          :doclink "s27-p2"
+                          :coref p11)
+                :assert (k1 / keep-01
+                            :doclink "s27-k"))
+    :snt28 (s29 / sentence-91
+                :assert (t12 / try-01
+                             :doclink "s28-t"
+                             :coref t10
+                             :result (f6 / find-out-03
+                                         :doclink "s28-f"))
+                :ref (i20 / i
+                          :doclink "s28-i"
+                          :coref a))
+    :snt29 (s30 / sentence-91
+                :assert (s46 / say-01
+                             :doclink "s29-s"
+                             :assert (i21 / identity-91)
+                             :subevent-of g12
+                             :ref (o1 / or
+                                      :doclink "s29-o"
+                                      :coref p16)))
+    :snt30 (s31 / sentence-91
+                :assert (g13 / generalization
+                             :subevent-of g12
+                             :deny (t13 / talk-01
+                                        :doclink "s30-t"
+                                        :info-source (i22 / i
+                                                          :doclink "s30-i"
+                                                          :coref a)
+                                        :ref (o2 / or
+                                                 :doclink "s30-o"))
+                             :ref (p18 / person
+                                       :doclink "s30-p"
+                                       :coref p16))
+                :ref i22)
+    :snt31 (s32 / sentence-91
+                :assert (g14 / generalization
+                             :subevent-of g12
+                             :assert (b6 / bring-01
+                                         :doclink "s31-b"))
+                :ref (h3 / he
+                         :doclink "s31-h"
+                         :coref p18)
+                :ref (i23 / i
+                          :doclink "s31-i"
+                          :coref a))
+    :snt32 (s33 / sentence-91
+                :assert (g15 / generalization
+                             :assert (t14 / talk-01
+                                          :doclink "s32-t")
+                             :subevent-of g12
+                             :ref (h4 / he
+                                      :doclink "s32-h"
+                                      :coref p18))
+                :ref (i24 / i
+                          :doclink "s32-i"
+                          :coref a))
+    :snt33 (s34 / sentence-91
+                :ref (m2 / man
+                         :doclink "s33-m2"
+                         :coref a)
+                :assert (g16 / generalization
+                             :subevent (p19 / please-01
+                                            :doclink "s33-p")
+                             :subevent (m4 / meet-02
+                                           :doclink "s33-m")
+                             :ref (g17 / grown-up
+                                       :doclink "s33-g"
+                                       :coref g11))))
+
+# ::id lpp_1943.2 ::date 2012-06-07T17:06:20 ::annotator ISI-AMR-05 ::preferred
+# ::snt Once when I was six years old I saw a magnificent picture in a book , called True Stories from Nature , about the primeval forest .
+# ::zh 当我还只有六岁的时候，在一本描写原始森林的名叫《真实的故事》的书中，看到了一副精彩的插画，
+# ::save-date Mon May 13, 2013 ::file lpp_1943_2.txt
+(s / see-01
+      :ARG0 (i / i)
+      :ARG1 (p / picture
+            :mod (m / magnificent)
+            :location (b2 / book :wiki -
+                  :name (n / name :op1 "True" :op2 "Stories" :op3 "from" :op4 "Nature")
+                  :topic (f / forest
+                        :mod (p2 / primeval))))
+      :mod (o / once)
+      :time (a / age-01
+            :ARG1 i
+            :ARG2 (t / temporal-quantity :quant 6
+                  :unit (y / year))))
+
+# ::id lpp_1943.3 ::date 2012-06-07T17:06:23 ::annotator ISI-AMR-05 ::preferred
+# ::snt It was a picture of a boa constrictor in the act of swallowing an animal .
+# ::zh 画的是一条蟒蛇正在吞食一只大野兽。
+# ::save-date Mon Apr 15, 2013 ::file lpp_1943_3.txt
+(p / picture
+  :domain (i / it)
+  :topic (b2 / boa
+           :mod (c2 / constrictor)
+           :ARG0-of (s / swallow-01
+                      :ARG1 (a / animal))))
+
+# ::id lpp_1943.4 ::date 2012-06-07T17:06:28 ::annotator ISI-AMR-05 ::preferred
+# ::snt Here is a copy of the drawing .
+# ::zh 页头上就是那副画的摹本。
+# ::save-date Thu Oct 29, 2015 ::file lpp_1943_4.txt
+(b / be-located-at-91
+      :ARG1 (t2 / thing
+            :ARG2-of (c / copy-01
+                  :ARG1 (p / picture
+                        :ARG1-of (d / draw-01))))
+      :ARG2 (h / here))
+
+# ::id lpp_1943.5 ::date 2012-06-07T17:06:32 ::annotator ISI-AMR-05 ::preferred
+# ::snt In the book it said : " Boa constrictors swallow their prey whole , without chewing it .
+# ::zh 这本书中写道：“这些蟒蛇把它们的猎获物不加咀嚼地囫囵吞下
+# ::save-date Fri Sep 6, 2013 ::file lpp_1943_5.txt
+(s2 / say-01
+      :ARG0 (b2 / book)
+      :ARG1 (s / swallow-01
+            :ARG0 (b / boa
+                  :mod (c / constrictor))
+            :ARG1 (p / prey
+                  :mod (w / whole)
+                  :poss b)
+            :manner (c2 / chew-01 :polarity -
+                  :ARG0 b
+                  :ARG1 p)))
+
+# ::id lpp_1943.6 ::date 2012-06-07T17:06:35 ::annotator ISI-AMR-05 ::preferred
+# ::snt After that they are not able to move , and they sleep through the six months that they need for digestion . "
+# ::zh 尔后就不能再动弹了；它们就在长长的六个月的睡眠中消化这些食物。”
+# ::save-date Fri Apr 19, 2013 ::file lpp_1943_6.txt
+(a / and
+      :op1 (p / possible-01 :polarity -
+            :ARG1 (m / move-01
+                  :ARG0 (t / they)
+                  :time (a2 / after
+                        :op1 (t3 / that))))
+      :op2 (s / sleep-01
+            :ARG0 t
+            :duration (t2 / temporal-quantity :quant 6
+                  :unit (m2 / month)
+                  :ARG1-of (n / need-01
+                        :ARG0 t
+                        :purpose (d / digest-01
+                              :ARG0 t)))))
+
+# ::id lpp_1943.7 ::date 2012-06-07T17:06:38 ::annotator ISI-AMR-05 ::preferred
+# ::snt I pondered deeply , then , over the adventures of the jungle .
+# ::zh 当时，我对丛林中的奇遇想得很多，
+# ::save-date Sun Jul 26, 2015 ::file lpp_1943_7.txt
+(p / ponder-01
+      :ARG0 (i / i)
+      :ARG1 (a / adventure
+            :location (j / jungle))
+      :ARG1-of (d / deep-02)
+      :time (t / then))
+
+# ::id lpp_1943.8 ::date 2012-06-07T17:06:41 ::annotator ISI-AMR-05 ::preferred
+# ::snt And after some work with a colored pencil I succeeded in making my first drawing .
+# ::zh 于是，我也用彩色铅笔画出了我的第一副图画。
+# ::save-date Thu Oct 29, 2015 ::file lpp_1943_8.txt
+(a2 / and
+      :op2 (s / succeed-01
+            :ARG0 (i / i)
+            :ARG1 (m / make-01
+                  :ARG0 i
+                  :ARG1 (p2 / picture
+                        :ARG1-of (d / draw-01
+                              :ARG0 i
+                              :ord (o / ordinal-entity :value 1))))
+            :time (a / after
+                  :op1 (w / work-01
+                        :ARG0 i
+                        :instrument (p / pencil
+                              :mod (c / color))
+                        :mod (s2 / some)))))
+
+# ::id lpp_1943.9 ::date 2012-06-07T17:06:44 ::annotator ISI-AMR-05 ::preferred
+# ::snt My Drawing Number One .
+# ::zh 我的第一号作品。
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_9.txt
+(p / picture :wiki -
+      :name (n2 / name :op1 "Drawing" :op2 "Number" :op3 "One")
+      :poss (i / i))
+
+# ::id lpp_1943.10 ::date 2012-06-07T17:06:47 ::annotator ISI-AMR-05 ::preferred
+# ::snt It looked like this : I showed my masterpiece to the grown - ups , and asked them whether the drawing frightened them .
+# ::zh 它是这样的：我把我的这副杰作拿给大人看，我问他们我的画是不是叫他们害怕。
+# ::save-date Thu Oct 29, 2015 ::file lpp_1943_10.txt
+(a / and
+      :op1 (l / look-02
+            :ARG0 (i / it)
+            :ARG1 (t / this))
+      :op2 (s / show-01
+            :ARG0 (i2 / i)
+            :ARG1 (m / masterpiece
+                  :poss i2)
+            :ARG2 (g / grown-up))
+      :op3 (a2 / ask-01
+            :ARG0 i2
+            :ARG1 (f / frighten-01 :mode interrogative
+                  :ARG0 (p / picture
+                        :ARG1-of (d / draw-01))
+                  :ARG1 g)
+            :ARG2 g))
+
+# ::id lpp_1943.11 ::date 2012-06-07T17:41:58 ::annotator ISI-AMR-05 ::preferred
+# ::snt But they answered : " Frighten ?
+# ::zh 他们回答我说：”害怕？
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_11.txt
+(c / contrast-01
+  :ARG2 (a / answer-01
+          :ARG0 (t / they)
+          :ARG2 (f / frighten-01
+                  :mode interrogative)))
+
+# ::id lpp_1943.12 ::date 2012-06-07T17:42:59 ::annotator ISI-AMR-05 ::preferred
+# ::snt Why should any one be frightened by a hat ? "
+# ::zh “一顶帽子有什么可怕的？”
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_12.txt
+(f / frighten-01
+  :ARG0 (h / hat)
+  :ARG1 (o / one
+          :mod (a / any))
+  :ARG1-of (c / cause-01
+             :ARG0 (a2 / amr-unknown)))
+
+# ::id lpp_1943.13 ::date 2012-06-07T17:45:40 ::annotator ISI-AMR-05 ::preferred
+# ::snt My drawing was not a picture of a hat .
+# ::zh 我画的不是帽子，
+# ::save-date Thu Oct 29, 2015 ::file lpp_1943_13.txt
+(p / picture-01 :polarity -
+      :ARG0 (p2 / picture
+            :ARG1-of (d / draw-01
+                  :ARG0 (i / i)))
+      :ARG1 (h / hat))
+
+# ::id lpp_1943.14 ::date 2012-06-07T17:46:19 ::annotator ISI-AMR-05 ::preferred
+# ::snt It was a picture of a boa constrictor digesting an elephant .
+# ::zh 是一条巨蟒在消化着一头大象。
+# ::save-date Mon Apr 15, 2013 ::file lpp_1943_14.txt
+(p / picture-01
+  :ARG0 (i / it)
+  :ARG1 (b2 / boa
+          :mod (c / constrictor)
+          :ARG0-of (d / digest-01
+                     :ARG1 (e / elephant))))
+
+# ::id lpp_1943.15 ::date 2012-06-07T17:46:55 ::annotator ISI-AMR-05 ::preferred
+# ::snt But since the grown - ups were not able to understand it , I made another drawing : I drew the inside of the boa constrictor , so that the grown - ups could see it clearly .
+# ::zh 既然大人们不能够理解。 于是我又把巨蟒肚子里的情况画了出来，以便让大人们能够看懂。
+# ::save-date Fri May 29, 2015 ::file lpp_1943_15.txt
+(c / contrast-01
+      :ARG2 (a2 / and
+            :op1 (d3 / draw-01
+                  :ARG0 (i / i)
+                  :ARG1 (p2 / picture
+                        :mod (a / another))
+                  :ARG1-of (c3 / cause-01
+                        :ARG0 (p3 / possible-01 :polarity -
+                              :ARG1 (u / understand-01
+                                    :ARG0 (g / grown-up)
+                                    :ARG1 (i2 / it)))))
+            :op2 (d / draw-01
+                  :ARG0 i
+                  :ARG1 (i3 / inside
+                        :part-of (b2 / boa
+                              :mod (c4 / constrictor)))
+                  :purpose (p / possible-01
+                        :ARG1 (s / see-01
+                              :ARG0 g
+                              :ARG1 (i4 / it)
+                              :ARG1-of (c2 / clear-06))))))
+
+# ::id lpp_1943.16 ::date 2012-06-08T13:12:10 ::annotator ISI-AMR-05 ::preferred
+# ::snt They always need to have things explained .
+# ::zh 这些大人总是需要解释。
+# ::save-date Fri Apr 19, 2013 ::file lpp_1943_16.txt
+(n / need-01
+      :ARG0 (t / they)
+      :ARG1 (e / explain-01)
+      :time (a / always))
+
+# ::id lpp_1943.17 ::date 2012-06-08T13:12:54 ::annotator ISI-AMR-05 ::preferred
+# ::snt My Drawing Number Two looked like this : The grown - ups ' response , this time , was to advise me to lay aside my drawings of boa constrictors , whether from the inside or the outside , and devote myself instead to geography , history , arithmetic and grammar .
+# ::zh 我的第二号作品是这样的：大人们劝我把这些画着开着肚皮的，或闭上肚皮的蟒蛇的图画放在一边，还是把兴趣放在地理、历史、算术、语法上。
+# ::save-date Thu Oct 29, 2015 ::file lpp_1943_17.txt
+(a6 / and
+      :op1 (l / look-02
+            :ARG0 (p / picture :wiki - :name (n / name :op1 "Drawing" :op2 "Number" :op3 "Two")
+                  :poss i)
+            :ARG1 (t2 / this))
+      :op2 (r / respond-01
+            :ARG0 (g / grown-up)
+            :ARG1 (i / i)
+            :ARG2 (a / advise-01
+                  :ARG0 g
+                  :ARG1 i
+                  :ARG2 (a3 / and
+                        :op1 (l2 / lay-01
+                              :ARG0 i
+                              :ARG1 (p2 / picture
+                                    :ARG1-of (d2 / draw-01
+                                          :ARG0 i)
+                                    :topic (b2 / boa
+                                          :mod (c2 / constrictor)
+                                          :mod (o / or
+                                                :op1 (i2 / inside)
+                                                :op2 (o2 / outside))))
+                              :ARG2 (a2 / aside))
+                        :op2 (d3 / devote-01
+                              :ARG0 i
+                              :ARG1 i
+                              :ARG2 (a4 / and
+                                    :op1 (g2 / geography)
+                                    :op2 (h / history)
+                                    :op3 (a5 / arithmetic)
+                                    :op4 (g3 / grammar))
+                              :ARG1-of (i4 / instead-of-91
+                                    :ARG2 d2))))
+            :time (t4 / time
+                  :mod (t5 / this))))
+
+# ::id lpp_1943.18 ::date 2012-06-08T13:18:52 ::annotator ISI-AMR-05 ::preferred
+# ::snt That is why , at the age of six , I gave up what might have been a magnificent career as a painter .
+# ::zh 就这样，在六岁的那年，我就放弃了当画家这一美好的职业。
+# ::save-date Tue Nov 4, 2014 ::file lpp_1943_18.txt
+(c2 / cause-01
+      :ARG0 (t2 / that)
+      :ARG1 (g / give-up-07
+            :ARG0 (i / i)
+            :ARG1 (c / career
+                  :mod (m / magnificent)
+                  :topic (p / person
+                        :ARG0-of (p2 / paint-02)))
+            :time (a / age-01
+                  :ARG1 i
+                  :ARG2 (t / temporal-quantity :quant 6
+                        :unit (y / year)))))
+
+# ::id lpp_1943.19 ::date 2012-06-09T11:31:56 ::annotator ISI-AMR-05 ::preferred
+# ::snt I had been disheartened by the failure of my Drawing Number One and my Drawing Number Two .
+# ::zh 我的第一号、第二号作品的不成功，使我泄了气。
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_19.txt
+(d / dishearten-01
+      :ARG0 (f / fail-01
+            :ARG1 (a / and
+                  :op1 (p / picture :wiki -
+                        :name (n / name :op1 "Drawing" :op2 "Number" :op3 "One"))
+                  :op2 (p2 / picture :wiki -
+                        :name (n2 / name :op1 "Drawing" :op2 "Number" :op3 "Two"))
+                  :poss i))
+      :ARG1 (i / i))
+
+# ::id lpp_1943.20 ::date 2012-07-17T12:15:00 ::annotator ISI-AMR-05 ::preferred
+# ::snt Grown - ups never understand anything by themselves , and it is tiresome for children to be always and forever explaining things to them .
+# ::zh 这些大人们，靠他们自己什么也弄不懂，还得老是不断地给他们作解释。
+# ::save-date Tue Nov 4, 2014 ::file lpp_1943_20.txt
+(a / and
+      :op1 (u / understand-01 :polarity -
+            :ARG0 (g / grown-up)
+            :ARG1 (a3 / anything)
+            :time (e2 / ever)
+            :mod (b / by-oneself))
+      :op2 (t / tiresome
+            :domain (e / explain-01
+                  :ARG0 (c / child)
+                  :ARG1 (t2 / thing)
+                  :ARG2 g
+                  :time (a4 / always)
+                  :mod (f / forever))))
+
+# ::id lpp_1943.21 ::date 2012-06-14T16:08:08 ::annotator ISI-AMR-05 ::preferred
+# ::snt So then I chose another profession , and learned to pilot airplanes .
+# ::zh 后来，我只好选择了另外一个职业，我学会了开飞机。
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_21.txt
+(c2 / cause-01
+  :ARG1 (a / and
+          :op1 (c / choose-01
+                 :ARG0 (i / i)
+                 :ARG1 (p / profession
+                         :mod (a2 / another)))
+          :op2 (l / learn-01
+                 :ARG0 i
+                 :ARG1 (p2 / pilot-01
+                         :ARG0 i
+                         :ARG1 (a3 / airplane)))))
+
+# ::id lpp_1943.22 ::annotator ISI-AMR-05 ::preferred
+# ::snt I have flown a little over all parts of the world ; and it is true that geography has been very useful to me .
+# ::zh 世界各地差不多都飞到过。 的确，地理学帮了我很大的忙。
+# ::save-date Mon Jul 6, 2015 ::file lpp_1943_22.txt
+(a / and
+      :op1 (f / fly-01
+            :ARG0 i
+            :location (o / over
+                  :op1 (p2 / part
+                        :part-of (w / world))))
+      :op2 (u / useful-05
+            :ARG0 (i / i)
+            :ARG1 (g / geography)
+            :degree (v / very)))
+
+# ::id lpp_1943.23 ::annotator ISI-AMR-05 ::preferred
+# ::snt At a glance I can distinguish China from Arizona .
+# ::zh 我一眼就能分辨出中国和亚里桑那。
+# ::save-date Fri Apr 12, 2013 ::file lpp_1943_23.txt
+(p / possible-01
+      :ARG1 (d / distinguish-01
+            :ARG0 (i / i)
+            :ARG1 (c / country :wiki "China"
+                  :name (n / name :op1 "China"))
+            :ARG2 (s / state :wiki "Arizona"
+                  :name (n2 / name :op1 "Arizona"))
+            :manner (g / glance-01
+                  :ARG0 i)))
+
+# ::id lpp_1943.24 ::date 2012-07-17T13:04:10 ::annotator ISI-AMR-05 ::preferred
+# ::snt If one gets lost in the night , such knowledge is valuable .
+# ::zh 要是夜里迷失了航向，这是很有用的。
+# ::save-date Tue Mar 17, 2015 ::file lpp_1943_24.txt
+(v / value-02
+      :ARG1 (k / knowledge
+            :mod (s / such))
+      :condition (g / get-03
+            :ARG1 (o / one)
+            :ARG2 (l / lost
+                  :time (d / date-entity :dayperiod (n / night)))))
+
+# ::id lpp_1943.25 ::date 2012-07-17T13:14:43 ::annotator ISI-AMR-05 ::preferred
+# ::snt In the course of this life I have had a great many encounters with a great many people who have been concerned with matters of consequence .
+# ::zh 这样，在我的生活中，我跟许多严肃的人有过很多的接触。
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_25.txt
+(e / encounter-01
+  :ARG0 (i / i)
+  :ARG1 (p / person
+          :quant (m2 / many
+                   :mod (g2 / great))
+          :ARG1-of (c / concern-01
+                     :ARG0 (m3 / matter
+                             :mod (c2 / consequence))))
+  :quant (m / many
+           :mod (g / great))
+  :time (c3 / course
+          :poss (l / life
+                  :mod (t / this))))
+
+# ::id lpp_1943.26 ::date 2012-07-17T13:29:12 ::annotator ISI-AMR-05 ::preferred
+# ::snt I have lived a great deal among grown - ups .
+# ::zh 我在大人们中间生活过很长时间。
+# ::save-date Mon Nov 3, 2014 ::file lpp_1943_26.txt
+(l / live-01
+      :ARG0 (i / i)
+      :mod (d / deal
+            :mod (g2 / great))
+      :location (a / among
+            :op1 (g / grown-up)))
+
+# ::id lpp_1943.27 ::date 2012-07-17T13:31:50 ::annotator ISI-AMR-05 ::preferred
+# ::snt I have seen them intimately , close at hand .
+# ::zh 我仔细地观察过他们，
+# ::save-date Mon Nov 16, 2015 ::file lpp_1943_27.txt
+(s / see-01
+      :ARG0 (i / i)
+      :ARG1 (t / they)
+      :ARG1-of (c / close-10
+            :ARG2 (a / at-hand))
+      :ARG2-of (i2 / intimate-02
+            :ARG1 i))
+
+# ::id lpp_1943.28 ::date 2012-07-17T13:35:38 ::annotator ISI-AMR-05 ::preferred
+# ::snt And that has n't much improved my opinion of them .
+# ::zh 但这并没有使我对他们的看法有多大的改变。
+# ::save-date Thu May 16, 2013 ::file lpp_1943_28.txt
+(a / and
+      :op2 (i / improve-01 :polarity -
+            :ARG0 (t / that)
+            :ARG1 (t3 / thing
+                  :ARG1-of (o2 / opine-01
+                        :ARG0 (i2 / i)
+                        :topic (t2 / they)))
+            :degree (m2 / much)))
+
+# ::id lpp_1943.29 ::date 2012-07-17T13:38:25 ::annotator ISI-AMR-05 ::preferred
+# ::snt Whenever I met one of them who seemed to me at all clear - sighted , I tried the experiment of showing him my Drawing Number One , which I have always kept .
+# ::zh 当我遇到一个头脑看来稍微清楚的大人时，我就拿出一直保存着的我那第一号作品来测试测试他。
+# ::save-date Tue Mar 1, 2016 ::file lpp_1943_29.txt
+(t / try-01
+      :ARG0 (i / i)
+      :ARG1 (e / experiment-01
+            :ARG1 (s / show-01
+                  :ARG1 (p2 / picture :wiki - :name (n / name :op1 "Drawing" :op2 "Number" :op3 "One"))
+                  :ARG2 p
+                  :ARG1-of (k / keep-01
+                        :ARG0 i
+                        :time (a / always))))
+      :time (m / meet-02
+            :ARG0 i
+            :ARG1 (p / person
+                  :ARG1-of (i2 / include-91
+                        :ARG2 (t3 / they))
+                  :ARG0-of (s3 / see-01
+                        :ARG1-of (c / clear-08)
+                        :ARG1-of (s4 / seem-01
+                              :ARG2 i)))
+            :mod (a2 / any)))
+
+# ::id lpp_1943.30 ::date 2012-07-24T08:57:30 ::annotator ISI-AMR-05 ::preferred
+# ::snt I would try to find out , so , if this was a person of true understanding .
+# ::zh 我想知道他是否真的有理解能力。
+# ::save-date Thu Feb 4, 2016 ::file lpp_1943_30.txt
+(t / try-01
+      :ARG0 (i / i)
+      :ARG1 (f / find-out-03
+            :ARG0 i
+            :ARG1 (u2 / understand-01 :mode interrogative
+                  :ARG0 (p / person
+                        :mod (t2 / this))
+                  :ARG1-of (t3 / true-01))))
+
+# ::id lpp_1943.31 ::date 2012-07-24T09:59:02 ::annotator ISI-AMR-05 ::preferred
+# ::snt But , whoever it was , he , or she , would always say : " That is a hat . "
+# ::zh 可是，得到的回答总是：“这是顶帽子。”
+# ::save-date Tue Apr 9, 2013 ::file lpp_1943_31.txt
+(c / contrast-01
+  :ARG2 (s / say-01
+          :ARG0 (o / or
+                  :op1 (h / he)
+                  :op2 (s2 / she))
+          :ARG1 (h2 / hat
+                  :domain (t / that))
+          :time (a / always)))
+
+# ::id lpp_1943.32 ::date 2012-07-24T10:00:58 ::annotator ISI-AMR-05 ::preferred
+# ::snt Then I would never talk to that person about boa constrictors , or primeval forests , or stars .
+# ::zh 我就不和他谈巨蟒呀，原始森林呀，或者星星之类的事。
+# ::save-date Mon Apr 15, 2013 ::file lpp_1943_32.txt
+(t / talk-01
+  :ARG0 (i / i)
+  :ARG1 (o / or
+          :op1 (b / boa
+                 :mod (c2 / constrictor))
+          :op2 (f / forest
+                 :mod (p2 / primeval))
+          :op3 (s / star))
+  :ARG2 (p / person
+          :mod (t2 / that))
+  :time (e / ever)
+  :polarity -)
+
+# ::id lpp_1943.33 ::date 2012-07-24T10:02:52 ::annotator ISI-AMR-05 ::preferred
+# ::snt I would bring myself down to his level .
+# ::zh 我只得迁就他的水平，
+# ::save-date Tue Jul 24, 2012 ::file lpp_1943_33.txt
+(b / bring-01
+      :ARG0 (i / i)
+      :ARG1 i
+      :ARG2 (l / level
+            :poss (h / he))
+      :ARG3 (d / down))
+
+# ::id lpp_1943.34 ::date 2012-07-24T10:05:56 ::annotator ISI-AMR-05 ::preferred
+# ::snt I would talk to him about bridge , and golf , and politics , and neckties .
+# ::zh 和他们谈些桥牌呀，高尔夫球呀，政治呀，领带呀这些。
+# ::save-date Sat Dec 29, 2012 ::file lpp_1943_34.txt
+(t / talk-01
+  :ARG0 (i / i)
+  :ARG1 (a / and
+          :op1 (b / bridge)
+          :op2 (g / golf)
+          :op3 (p / politics)
+          :op4 (n2 / necktie))
+  :ARG2 (h / he))
+
+# ::id lpp_1943.35 ::date 2012-07-24T10:08:31 ::annotator ISI-AMR-05 ::preferred
+# ::snt And the grown - up would be greatly pleased to have met such a sensible man .
+# ::zh 于是大人们就十分高兴能认识我这样一个通情达理的人。
+# ::save-date Tue May 5, 2015 ::file lpp_1943_35.txt
+(a / and
+      :op2 (p / please-01
+            :ARG0 (m / meet-02
+                  :ARG0 g
+                  :ARG1 (m2 / man
+                        :ARG2-of (s / sense-02
+                              :degree (s2 / such))))
+            :ARG1 (g / grown-up)
+            :degree (g2 / great)))

@@ -1,0 +1,22 @@
+# ::id fracas-120.premise_0 ::date 2017-03-08T23:09:30
+# ::snt Smith attended a meeting.
+# ::user timjogorman
+(a / attend-01
+      :ARG0 (p / person :wiki -
+            :name (n / name :op1 "Smith"))
+      :ARG1 (m / meet-03))
+
+# ::id fracas-120.premise_1 ::date 2017-03-08T23:09:30
+# ::snt She chaired it.
+# ::user timjogorman
+(c / chair-01
+      :ARG0 (s / she)
+      :ARG1 (i2 / it))
+
+# ::id fracas-120.hypothesis_yes ::date 2017-03-08T23:09:30
+# ::snt Smith chaired a meeting.
+# ::user timjogorman
+(c / chair-01
+      :ARG0 (p / person :wiki -
+            :name (n / name :op1 "Smith"))
+      :ARG1 (m / meet-03))

@@ -1,0 +1,18 @@
+\ref BoyB.019
+\tx Hinenno'      he'ihnoohobeeno'         honoh'oehiho' hihii3iihi'
+\mb hinen - no'   he'ih-    noohob - eeno' honoh'oehiho' hihii3iihi'
+\ge man   - NA.PL NARRPAST- see    - 3PL/4 young boy     from
+\ps na    - infl  prefix-   vta    - infl  na.dim.obv    part.adv
+\tx hiyeih'inoo.
+\mb hi-   yeih'                 - inoo
+\ge 3S-   home                  - pers.PL
+\ps infl- ni.oblposs+loc/plposs - infl
+\ft The men in the village saw the boy from their lodges.
+
+\ref BoyB.020
+\tx Noh  he'ih'iino',             “heniihoho'neiht     honoh'oehihi'.”
+\mb noh  he'ih-    'ii  - no'     heniihoho'neihi - t    honoh'oehihi'
+\ge and  NARRPAST- said - pers.PL IC.brave        - 3.S  young boy
+\ps part prefix-   vai  - infl    vai             - infl na.dim
+\ft They said, “he is a brave boy.”
+
