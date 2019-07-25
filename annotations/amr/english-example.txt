@@ -1,0 +1,50 @@
+\ref ulysses.txt.0
+\tx Stately , plump Buck Mulligan came from the stairhead , bearing a bowl of lather on which a mirror and a razor lay crossed .
+\mb stately , plump Buck Mulligan come from the stairhead , bear a bowl of lather on which a mirror and a razor lay cross . bear-01 bear-02 bear-03 bear-06 come-01 come-02 come-03 come-04 come-05 come-12 come-16 come-28 cross-01 cross-02 cross-04 cross-05
+\def bear.01: hold, support, endure bear.02: bear children bear.03: move bear.06: has relation to come.01: motion come.02: pursue (often with after), pursuing come.03: arise (from) come.04: become, arrive at a certain state of being come.05: pertaining to inclusion in a purchase come.12: come to: speaking of come.16: ring up at a certain monetary value come.28: serial verb construction cross.01: (cause) two things to intersect cross.02: move perpendicularly to some barrier cross.04: eliminate from a list cross.05: make angry
+
+\ref ulysses.txt.1
+\tx A yellow dressinggown , ungirdled , was sustained gently behind him on the mild morning air .
+\mb a yellow dressinggown , ungirdled , be sustain gently behind him on the mild morning air . be-01 be-02 be-03 mild-01 sustain-01 sustain-02 yellow-02 yellow-03
+\def be.01: copula be.02: existential, existing be.03: auxiliary mild.01: not extreme sustain.01: continue sustain.02: suffer (a loss) yellow.02: be the color yellow yellow.03: cowardly
+
+\ref ulysses.txt.2
+\tx He held the bowl aloft and intoned : —Introibo ad altare Dei .
+\mb he hold the bowl aloft and intoned : —introibo ad altare Dei . hold-01 hold-02 hold-03 hold-04 hold-13 hold-14
+\def hold.01: grasp, bear, keep hold.02: grant, view, declare, believing hold.03: keep, last, maintain hold.04: conduct, hosting hold.13: to have or contain (usually abstract), having or containing hold.14: adhere to, follow
+
+\ref ulysses.txt.3
+\tx Halted , he peered down the dark winding stairs and called out coarsely : —Come up , Kinch !
+\mb halt , he peer down the dark wind stair and call out coarsely : —come up , Kinch ! call-01 call-02 call-03 call-07 call-09 call-10 call-11 call-13 call-14 call-16 halt-01 halt-02 peer-01 wind-01
+\def call.01: label call.02: summon, perhaps to or by phone call.03: demand call.07: say across a distance call.09: call into question, doubt call.10: prediction, decision call.11: call (the shots); decide, dictate, officiate call.13: call someone out on something (non-VPC version) call.14: claim (like dibs) call.16: visit halt.01: stop halt.02: halt from peer.01: to look searchingly wind.01: move in circular fashion, cause to be coiled
+
+\ref ulysses.txt.4
+\tx Come up , you fearful jesuit !
+\mb Come up , you fearful jesuit !
+\def 
+
+\ref ulysses.txt.5
+\tx Solemnly he came forward and mounted the round gunrest .
+\mb solemnly he come forward and mount the round gunrest . come-01 come-02 come-03 come-04 come-05 come-12 come-16 come-28 mount-01 mount-02 mount-03 round-03 round-05
+\def come.01: motion come.02: pursue (often with after), pursuing come.03: arise (from) come.04: become, arrive at a certain state of being come.05: pertaining to inclusion in a purchase come.12: come to: speaking of come.16: ring up at a certain monetary value come.28: serial verb construction mount.01: intentional climber mount.02: non-intentional climber; cf rise mount.03: erect, construct round.03: move in or have an arc-shaped path, circuit through a course (e.g. "do rounds") round.05: session, bout, one time through
+
+\ref ulysses.txt.6
+\tx He faced about and blessed gravely thrice the tower , the surrounding land and the awaking mountains .
+\mb he face about and bless gravely thrice the tower , the surround land and the awaking mountain . bless-01 face-01 surround-01
+\def bless.01: bless, act of saying prayer, bestowing happiness/wellbeing face.01: look across at surround.01: be on all sides of, encompassing
+
+\ref ulysses.txt.7
+\tx Then , catching sight of Stephen Dedalus , he bent towards him and made rapid crosses in the air , gurgling in his throat and shaking his head .
+\mb then , catch sight of Stephen Dedalus , he bend towards him and make rapid cross in the air , gurgle in his throat and shake his head . bend-01 bend-02 catch-01 catch-02 catch-03 gurgle-01 make-01 make-02 make-05 make-06 make-18 make-19 make-27 make-LV see-01 shake-01
+\def bend.01: (cause to) form a curve, forced into a non-straight configuration bend.02: yield, give way catch.01: get catch.02: come upon, find catch.03: trap gurgle.01: make bubbling noise make.01: create make.02: cause (to be) make.05: earn cash or wages, earning make.06: achieve being, seem make.18: arrive at, achieve make.19: "way" construction: make one's way, travel make.27: interpret, have an understanding of make.LV: light verb see.01: view shake.01: tremble, moving vigorously back and forth
+
+\ref ulysses.txt.8
+\tx Stephen Dedalus , displeased and sleepy , leaned his arms on the top of the staircase and looked coldly at the shaking gurgling face that blessed him , equine in its length , and at the light untonsured hair , grained and hued like pale oak .
+\mb Stephen Dedalus , displease and sleepy , lean his arm on the top of the staircase and look coldly at the shake gurgle face that bless him , equine in its length , and at the light untonsured hair , grain and hue like pale oak . bless-01 displease-01 gurgle-01 lean-01 long-03 look-01 look-02 look-04 look-09 pale-03 shake-01
+\def bless.01: bless, act of saying prayer, bestowing happiness/wellbeing displease.01: to cause annoyance gurgle.01: make bubbling noise lean.01: to incline or cause to incline long.03: having a great length measurement look.01: vision, look look.02: seeming, appear/seem look.04: expect look.09: discourse: attend to this pale.03: be characterized as light in color (perhaps unhealthily so), pallid, feeble shake.01: tremble, moving vigorously back and forth
+
+\ref ulysses.txt.9
+\tx Buck Mulligan peeped an instant under the mirror and then covered the bowl smartly .
+\mb Buck Mulligan peep an instant under the mirror and then cover the bowl smartly . cover-01 cover-02 cover-03 peep-01 peep-02
+\def cover.01: has responsibility for, handles, insures, accounts for cover.02: smear, put over, spreading across cover.03: broadcast peep.01: a short, shrill little cry or sound, as that of   a baby bird peep.02: to look slyly, pryingly, or furtively
+

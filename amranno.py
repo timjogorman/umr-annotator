@@ -147,7 +147,7 @@ class AnnotationAMR:
                     return False
                 return True
 
-        elif len(update_string.strip().split(" ")) == 4:
+        elif len(update_string.strip().split(" ")) == 4 and update_string.strip().split(" ")[0] in ['del']:
             command, head, relation, concept = update_string.strip().split(" ")
             if command.lower() == 'del':
                 try:
@@ -155,5 +155,13 @@ class AnnotationAMR:
                 except:
                     return False
                 return True
+        elif len(update_string.strip().split(" ")) > 3:
 
+            head, relation, concept = update_string.strip().split(" ")[:3]
+            all_names = update_string.strip().split(" ")[3:]
+            newvar = self.add_concept(head, relation, concept)
+            namevar = self.add_concept(newvar, ":name", "name")
+            for opid, op in enumerate(all_names):
+                self.add_string(namevar, ":op"+str(opid+1), '"'+op+'"')
+            return True
         return False
