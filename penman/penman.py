@@ -548,6 +548,76 @@ class PENMANCodec(object):
         return self._layout(p, top, 0, set())
 
 
+
+    def _encode_penman2json(self, g, top=None):
+        """
+        Walk graph g and find a spanning dag, then serialize the result.
+
+        First, depth-first traversal of preferred orientations (whether
+        true or inverted) to create graph p.
+
+        If any triples remain, select the first remaining triple whose
+        source in the dispreferred orientation exists in p, where
+        'first' is determined by the order of inserted nodes (i.e. a
+        topological sort). Add this triple, then repeat the depth-first
+        traversal of preferred orientations from its target. Repeat
+        until no triples remain, or raise an error if there are no
+        candidates in the dispreferred orientation (which likely means
+        the graph is disconnected).
+        """
+        if top is None:
+            top = g.top
+        remaining = set(g.triples())
+
+        variables = g.variables()
+        store = defaultdict(lambda: ([], []))  # (preferred, dispreferred)
+        for t in g.triples():
+            if t.inverted:
+                store[t.target][0].append(t)
+                store[t.source][1].append(Triple(*t, inverted=False))
+            else:
+                store[t.source][0].append(t)
+                store[t.target][1].append(Triple(*t, inverted=True))
+
+        p = defaultdict(list)
+        topolist = [top]
+
+        def _update(t):
+            src, tgt = (t[2], t[0]) if t.inverted else (t[0], t[2])
+            p[src].append(t)
+            remaining.remove(t)
+            if tgt in variables and t.relation != self.TYPE_REL:
+                topolist.append(tgt)
+                return tgt
+            return None
+
+        def _explore_preferred(src):
+            ts = store.get(src, ([], []))[0]
+            for t in ts:
+                if t in remaining:
+                    tgt = _update(t)
+                    if tgt is not None:
+                        _explore_preferred(tgt)
+            ts[:] = []  # clear explored list
+
+        _explore_preferred(top)
+
+        while remaining:
+            flip_candidates = [store.get(v, ([],[]))[1] for v in topolist]
+            for fc in flip_candidates:
+                fc[:] = [c for c in fc if c in remaining]  # clear superfluous
+            if not any(len(fc) > 0 for fc in flip_candidates):
+                raise EncodeError('Invalid graph; possibly disconnected.')
+            c = next(c for fc in flip_candidates for c in fc)
+            tgt = _update(c)
+            if tgt is not None:
+                _explore_preferred(tgt)
+
+        return self._layout2json(p, top, 0, set())
+
+
+
+
     def _determine_triples_to_add_to_disconnected_graph(self, g, top=None):
         """
         Use with caution!
@@ -635,6 +705,53 @@ class PENMANCodec(object):
         tail = (delim + (' ' * offset)).join(branches) + ')'
         return head + tail
 
+
+    def _layout2json(self, g, src, offset, seen):
+        indent = self.indent
+        if src not in g or len(g.get(src, [])) == 0 or src in seen:
+            
+            return {"variable":None, "type":src, "rels":[]}
+            
+        seen.add(src)   
+        branches = []
+        jsonbranches = []
+        its_type = None
+        trips = list(g.keys())
+
+        #input("###")
+        #   trips = [x.source for x in g if x.relation == 'instance']
+        outedges = self.relation_sort(g[src])
+        head = '({}'.format(src)
+        if indent is True:
+            offset += len(head) + 1  # + 1 for space after src (added later)
+        elif indent is not None and indent is not False:
+            offset += indent
+        for t in outedges:
+            if t.relation == self.TYPE_REL:
+                if t.target is not None:
+                    # node types always come first
+                    branches = ['/ {}'.format(t.target)] + branches
+                    its_type = t.target
+            else:
+                if t.inverted:
+                    tgt = t.source
+                    rel = self.invert_relation(t.relation)
+                else:
+                    tgt = t.target
+                    rel = t.relation or ''
+                inner_offset = (len(rel) + 2) if indent is True else 0
+                branch = self._layout2json(g, tgt, offset + inner_offset, seen)
+                relation_type = "string"
+                if tgt in trips:
+                    relation_type = "conceptlink"
+                branches.append(':{} {}'.format(rel, branch))
+                jsonbranches.append([rel, relation_type, branch])
+                
+        if branches:
+            head += ' '
+        delim = ' ' if (indent is None or indent is False) else '\n'
+        tail = (delim + (' ' * offset)).join(branches) + ')'
+        return {"variable":src, "type":its_type, "rels":jsonbranches}
     def _encode_triple_conjunction(self, g, top=None):
         if top is None:
             top = g.top
@@ -826,7 +943,6 @@ class MRPCodec(PENMANCodec):
             #print(header2)
             #print(rawstring)
             #input("###")
-
         
 class AMRCodec(PENMANCodec):
     """
@@ -875,6 +991,9 @@ class AMRCodec(PENMANCodec):
                 'Cannot (de)invert {}; not allowed'.format(relation)
             )
         return rel
+    def encode2json(self, g, top=None, triples=False):
+        rawstring = self._encode_penman2json(g, top=top)
+        return rawstring
 
 
 class Triple(namedtuple('Triple', ('source', 'relation', 'target'))):

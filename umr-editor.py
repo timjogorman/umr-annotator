@@ -76,9 +76,9 @@ class UMRfile:
         layouts = []
         for amrid, a in enumerate(self.amrs):
             if amrid == self.focus:
-                layouts.append([sg.Text(self.sentences[amrid]+"\n"+str(a),key="SUB"+str(amrid), font=("Times",12,""),text_color="#000000")])
+                layouts.append([sg.Text(str(amrid)+". "+self.sentences[amrid]+"\n"+str(a),key="SUB"+str(amrid), font=("Times",12,""),text_color="#000000")])
             else:
-                layouts.append([sg.Text(self.sentences[amrid]+"\n"+str(a),key="SUB"+str(amrid), font=("Times",12,""),text_color="#a5bbb2")])
+                layouts.append([sg.Text(str(amrid)+". "+self.sentences[amrid]+"\n"+str(a),key="SUB"+str(amrid), font=("Times",12,""),text_color="#a5bbb2")])
 
         amr_box = sg.Column(layouts,
         size=(850, 660),
@@ -132,8 +132,13 @@ def annotateUMR(rawfile, filename):
             target = values['_IN_'].strip().strip("!").split(" ")[-1]
             head, relation, __ = values['_IN_'].strip().split(" ")
             concept = umrf.get_concept(target)
-            if len(concept) > 0:
-                newf = umrf.its_amr.add_concept(head, relation, concept[0])
+            if relation.endswith('doclink'):
+                umrf.its_amr.add_string(head, "doclink", '"s'+str(umrf.focus)+"-"+target+'"')    
+            elif len(concept) > 0:
+                try:
+                    newf = umrf.its_amr.add_concept(head, relation, concept[0])
+                except:
+                    continue
                 umrf.its_amr.add_string(newf, "doclink", '"s'+str(umrf.focus)+"-"+target+'"')    
             else:
                 status = "No variable "+target+ " in that AMR"
@@ -169,13 +174,13 @@ if __name__ == "__main__":
         rawtext = open(fn).read()
         if not "::umr" in rawtext:
             if style == 'cu':
-                rawtext += "# ::umr \n(u1 / utterance :info-source (a / author)"
+                rawtext += "# ::umr \n(u1 / utterance :op1 (t1 / turn :info-source (a / author)"
                 for q in range(rawtext.count("::id")):
                     rawtext += "   :snt"+str(q)+"(s"+str(q+1)+" / sentence-91)\n"
-                rawtext += ")\n\n"
+                rawtext += "))\n\n"
             elif style == 'unm':
-                rawtext += "# ::umr \n(d / document "
+                rawtext += "# ::umr \n(t / document :op1 (t1 / turn  :modal-source (a / author)"
                 for q in range(rawtext.count("::id")):
-                    rawtext += "   :snt"+str(q)+"(s"+str(q+1)+" / root :modal-source (a"+str(q+1)+" / auth))\n"
-                rawtext += ")\n\n"
+                    rawtext += "   :snt"+str(q)+"(s"+str(q+1)+" / sentence-author :coref a)\n"
+                rawtext += "))\n\n"
     annotateUMR(rawtext, fn)

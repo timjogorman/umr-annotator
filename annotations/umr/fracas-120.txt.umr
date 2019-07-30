@@ -1,0 +1,45 @@
+# ::umr
+(u1 / utterance
+    :op1 (t1 / turn
+             :info-source (a / author)
+             :snt0 (s1 / sentence-91
+                       :assert (a1 / attend-01
+                                   :doclink "s0-a")
+                       :assert (m1 / meet-03
+                                   :doclink "s0-m"
+                                   :doclink "s1-i2"))
+             :snt1 (s2 / sentence-91
+                       :assert (c1 / chair-01
+                                   :doclink "s1-c"))
+             :snt2 (s3 / sentence-91
+                       :assert (c2 / chair-01
+                                   :doclink "s2-c")
+                       :assert (m2 / meet-03
+                                   :doclink "s2-m")))
+    :ref (p1 / person
+             :doclink "s0-p"
+             :doclink "s1-s"
+             :doclink "s2-p"))
+
+# ::id fracas-120.premise_0 ::date 2017-03-08T23:09:30
+# ::snt Smith attended a meeting.
+# ::user timjogorman
+(a / attend-01
+      :ARG0 (p / person :wiki -
+            :name (n / name :op1 "Smith"))
+      :ARG1 (m / meet-03))
+
+# ::id fracas-120.premise_1 ::date 2017-03-08T23:09:30
+# ::snt She chaired it.
+# ::user timjogorman
+(c / chair-01
+      :ARG0 (s / she)
+      :ARG1 (i2 / it))
+
+# ::id fracas-120.hypothesis_yes ::date 2017-03-08T23:09:30
+# ::snt Smith chaired a meeting.
+# ::user timjogorman
+(c / chair-01
+      :ARG0 (p / person :wiki -
+            :name (n / name :op1 "Smith"))
+      :ARG1 (m / meet-03))

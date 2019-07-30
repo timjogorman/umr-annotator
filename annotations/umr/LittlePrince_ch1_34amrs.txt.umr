@@ -1,388 +1,391 @@
 # ::umr
-(u1 / utterance
-    :info-source (a / author)
-    :snt0 (s1 / sentence-91
-              :assert (s35 / see-01
-                           :doclink "s0-s")
-              :ref (i1 / i
-                       :doclink "s0-i"
-                       :coref a)
-              :ref (b1 / book
-                       :doclink "s0-b2")
-              :contained-by (t1 / time
-                                :contains (a1 / age-01
-                                              :doclink "s0-a"))
-              :ref (p3 / picture
-                       :doclink "s0-p"))
-    :snt1 (s2 / sentence-91
-              :ref (i2 / it
-                       :coref p3)
-              :assert (p1 / picture
-                          :doclink "s1-p"
-                          :assert (s36 / swallow-01
-                                       :doclink "s1-s")
-                          :ref (a2 / animal
-                                   :doclink "s1-a")
-                          :info-source i2))
-    :snt2 (s3 / sentence-91
-              :assert (c1 / copy-01
-                          :doclink "s2-c")
-              :ref (p2 / picture
-                       :doclink "s2-p"
-                       :coref p3)
-              :ref (t3 / thing
-                       :doclink "s2-t2"))
-    :snt3 (s4 / sentence-91
-              :assert (s38 / say-01
-                           :doclink "s3-s2"
-                           :assert (g1 / generalization
-                                       :assert (s37 / swallow-01
-                                                    :doclink "s3-s")
-                                       :ref (p5 / prey
-                                                :doclink "s3-p")
-                                       :ref (b3 / boa
-                                                :doclink "s3-b")
-                                       :deny (c2 / chew-01
-                                                 :doclink "s3-c2"))
-                           :inf-source (b2 / book
-                                           :doclink "s3-b2"
-                                           :coref b1))
-              :ref (b4 / book
-                       :doclink "s3-b2"
-                       :coref b1))
-    :snt4 (s5 / sentence-91
-              :assert (g2 / generalization
-                          :assert (s40 / sleep-01
-                                       :doclink "s4-s")
-                          :assert (n1 / need-01
-                                      :doclink "s4-n")
-                          :assert (d2 / digest-01
-                                      :doclink "s4-d")
-                          :subevent-of g1))
-    :snt5 (s6 / sentence-91
-              :assert (p4 / ponder-01
-                          :doclink "s5-p"
-                          :assert s38))
-    :snt6 (s7 / sentence-91
-              :assert (s39 / succeed-01
-                           :doclink "s6-s")
-              :assdert (w1 / work-01
-                           :doclink "s6-w"
-                           :assert (m1 / make-01
-                                       :doclink "s6-m"))
-              :assert m1
-              :ref (p6 / picture
-                       :doclink "s6-p2")
-              :ref (i4 / i
-                       :doclink "s6-i"
-                       :coref a))
-    :snt7 (s8 / sentence-91
-              :ref (p7 / picture
-                       :doclink "s7-p"
-                       :coref p6)
-              :ref (i3 / i
-                       :doclink "s7-i"
-                       :coref a))
-    :snt8 (s9 / sentence-91
-              :assert (l1 / look-02
-                          :doclink "s8-l")
-              :assert (s41 / show-01
-                           :doclink "s8-s"
-                           :after m1)
-              :assert (a3 / ask-01
-                          :doclink "s8-a2"
-                          :neut (f2 / frighten-01
-                                    :doclink "s8-f")
-                          :subevent s41)
-              :ref (i6 / it
-                       :doclink "s8-i"
-                       :coref p7)
-              :ref (i5 / i
-                       :doclink "s8-i2"
-                       :coref a)
-              :ref (g3 / grown-up
-                       :doclink "s8-g"))
-    :snt9 (s10 / sentence-91
-               :assert (a4 / answer-01
-                           :doclink "s9-a"
-                           :neut (f1 / frighten-01
-                                     :doclink "s9-f")
-                           :info-source (t2 / they
-                                            :doclink "s9-t"
-                                            :ref g3))
-               :ref t2)
-    :snt10 (s11 / sentence-91
-                :info-source t2
-                :neut (f3 / frighten-01
-                          :doclink "s10-f"
-                          :coref f1)
-                :ref (h1 / hat
-                         :doclink "s10-h")
-                :request-info (a5 / amr-unknown
-                                  :doclink "s10-a2"))
-    :snt11 (s12 / sentence-91
-                :deny (p9 / picture-01
-                          :doclink "s11-p")
-                :ref (p8 / picture
-                         :doclink "s11-p2"
-                         :coref p7)
-                :ref (h2 / hat
-                         :doclink "s11-h")
-                :ref (i7 / i
-                         :doclink "s11-i"
-                         :coref a))
-    :snt12 (s13 / sentence-91
-                :assert (p10 / picture-01
-                             :doclink "s12-p"
-                             :assert (d1 / digest-01
-                                         :doclink "s12-d")
-                             :ref (e1 / elephant
-                                      :doclink "s12-e")
-                             :ref (b5 / boa
-                                      :doclink "s12-b2")
-                             :info-source (i8 / it
-                                              :doclink "s12-i"
-                                              :coref p8))
-                :ref i8)
-    :snt13 (s14 / sentence-91
-                :deny (u2 / understand-01
-                          :doclink "s13-u"
-                          :after a4)
-                :ref (g4 / grown-up
-                         :doclink "s13-g")
-                :ref (i9 / it
-                         :doclink "s13-i2"
-                         :coref i8)
-                :assert (d3 / draw-01
-                            :doclink "s13-d"
-                            :after u2)
-                :assert-prob (s42 / see-01
-                                  :doclink "s13-s")
-                :ref (p12 / picture
-                          :doclink "s13-p2"))
-    :snt14 (s15 / sentence-91
-                :assert (g5 / generalization
-                            :ref (t4 / they
-                                     :doclink "s14-t"
-                                     :coref g4)
-                            :assert (e2 / explain-01
-                                        :doclink "s14-e")
-                            :assert (n2 / need-01
-                                        :doclink "s14-n")))
-    :snt15 (s16 / sentence-91
-                :assert (l2 / look-02
-                            :doclink "s15-l")
-                :ref (p11 / picture
-                          :doclink "s15-p"
-                          :coref p12)
-                :assert (r1 / respond-01
-                            :doclink "s15-r")
-                :assert (a6 / advise-01
-                            :doclink "s15-a"
-                            :subevent-of r1
-                            :deont-pos (l3 / lay-01
-                                           :doclink "s15-l2")
-                            :deont-pos (d4 / devote-01
-                                           :doclink "s15-d3")))
-    :snt16 (s17 / sentence-91
-                :assert (g6 / give-up-07
-                            :doclink "s16-g"
-                            :time-of (t5 / time
-                                         :coref t1)
-                            :cause a6)
-                :neut (c4 / career
-                          :doclink "s16-c")
-                :ref (i10 / i
-                          :doclink "s16-i"
-                          :coref a))
-    :snt17 (s18 / sentence-91
-                :assert (d5 / dishearten-01
-                            :doclink "s17-d"
-                            :subevent g6)
-                :assert (f4 / fail-01
-                            :doclink "s17-f"
-                            :before u1))
-    :snt18 (s19 / sentence-91
-                :assert (g7 / generalization
-                            :deny (u3 / understand-01
-                                      :doclink "s18-u")
-                            :ref (g9 / grown-up
-                                     :doclink "s18-g")
-                            :ref (a7 / anything
-                                     :doclink "s18-a3"))
-                :assert (g8 / generlization
-                            :ref (c3 / child
-                                     :doclink "s18-c")
-                            :ref g9
-                            :neces-pos (e3 / explain-01
-                                           :doclink "s18-e")
-                            :assert (t6 / tiresome
-                                        :doclink "s18-t")))
-    :snt19 (s20 / sentence-91
-                :assert (c6 / choose-01
-                            :doclink "s19-c"
-                            :cause g6)
-                :assert (l4 / learn-01
-                            :doclink "s19-l"
-                            :cause c6
-                            :neut (p13 / pilot-01
-                                       :doclink "s19-p2"
-                                       :ref (a8 / airplane
-                                                :doclink "s19-a3")))
-                :ref (i11 / i
-                          :doclink "s19-i"
-                          :coref a))
-    :snt20 (s21 / sentence-91
-                :assert (f5 / fly-01
-                            :doclink "s20-f"
-                            :subevent (u4 / useful-05
-                                          :doclink "s20-u"))
-                :ref (i12 / i
-                          :doclink "s20-i"
-                          :coref a)
-                :ref (p14 / part
-                          :doclink "s20-p2"))
-    :snt21 (s22 / sentence-91
-                :assert-possible (d6 / distinguish-01
-                                     :doclink "s21-d")
-                :ref (i13 / i
-                          :doclink "s21-i"
-                          :coref a)
-                :ref (c5 / country
-                         :doclink "s21-c")
-                :ref (s43 / state
-                          :doclink "s21-s"))
-    :snt22 (s23 / sentence-91
-                :assert (g10 / generalization
-                             :condition (l5 / lost
-                                            :doclink "s22-l")
-                             :assert (v1 / value-02
-                                         :doclink "s22-v")))
-    :snt23 (s24 / sentence-91
-                :assert (e4 / encounter-01
-                            :doclink "s23-e")
-                :ref (i14 / i
-                          :doclink "s23-i"
-                          :coref a)
-                :ref (p15 / person
-                          :doclink "s23-p"))
-    :snt24 (s25 / sentence-91
-                :assert (l6 / live-01
-                            :doclink "s24-l")
-                :ref (i16 / i
-                          :doclink "s24-i"
-                          :coref a)
-                :ref (g11 / grown-up
-                          :doclink "s24-g"))
-    :snt25 (s26 / sentence-91
-                :assert (s44 / see-01
-                             :doclink "s25-s"
-                             :subevent-of l6)
-                :ref (t7 / they
-                         :doclink "s25-t"
-                         :coref g11)
-                :ref (i15 / i
-                          :doclink "s25-i"
-                          :coref i16))
-    :snt26 (s27 / sentence-91
-                :deny (i17 / improve-01
-                           :doclink "s26-i")
-                :ref (i18 / i
-                          :doclink "s26-i2")
-                :ref (t8 / they
-                         :doclink "s26-t2"
-                         :coref g11)
-                :ref (t9 / that
-                         :doclink "s26-t"
-                         :coref s44))
-    :snt27 (s28 / sentence-91
-                :assert (g12 / generalization
-                             :condition (m3 / meet-02
-                                            :doclink "s27-m")
-                             :assert (t10 / try-01
-                                          :doclink "s27-t")
-                             :assert (e5 / experiment-01
-                                         :doclink "s27-e"
-                                         :subevent (s45 / show-01
-                                                        :doclink "s27-s"))
-                             :ref (p16 / person
-                                       :doclink "s27-p"))
-                :ref (i19 / i
-                          :doclink "s27-i"
-                          :coref a)
-                :ref (t11 / they
-                          :doclink "s27-t3"
-                          :coref g11)
-                :ref (p17 / picture
-                          :doclink "s27-p2"
-                          :coref p11)
-                :assert (k1 / keep-01
-                            :doclink "s27-k"))
-    :snt28 (s29 / sentence-91
-                :assert (t12 / try-01
-                             :doclink "s28-t"
-                             :coref t10
-                             :result (f6 / find-out-03
-                                         :doclink "s28-f"))
-                :ref (i20 / i
-                          :doclink "s28-i"
-                          :coref a))
-    :snt29 (s30 / sentence-91
-                :assert (s46 / say-01
-                             :doclink "s29-s"
-                             :assert (i21 / identity-91)
-                             :subevent-of g12
-                             :ref (o1 / or
-                                      :doclink "s29-o"
-                                      :coref p16)))
-    :snt30 (s31 / sentence-91
-                :assert (g13 / generalization
-                             :subevent-of g12
-                             :deny (t13 / talk-01
-                                        :doclink "s30-t"
-                                        :info-source (i22 / i
-                                                          :doclink "s30-i"
-                                                          :coref a)
-                                        :ref (o2 / or
-                                                 :doclink "s30-o"))
-                             :ref (p18 / person
-                                       :doclink "s30-p"
-                                       :coref p16))
-                :ref i22)
-    :snt31 (s32 / sentence-91
-                :assert (g14 / generalization
-                             :subevent-of g12
-                             :assert (b6 / bring-01
-                                         :doclink "s31-b"))
-                :ref (h3 / he
-                         :doclink "s31-h"
-                         :coref p18)
-                :ref (i23 / i
-                          :doclink "s31-i"
-                          :coref a))
-    :snt32 (s33 / sentence-91
-                :assert (g15 / generalization
-                             :assert (t14 / talk-01
-                                          :doclink "s32-t")
-                             :subevent-of g12
-                             :ref (h4 / he
-                                      :doclink "s32-h"
-                                      :coref p18))
-                :ref (i24 / i
-                          :doclink "s32-i"
-                          :coref a))
-    :snt33 (s34 / sentence-91
-                :ref (m2 / man
-                         :doclink "s33-m2"
-                         :coref a)
-                :assert (g16 / generalization
-                             :subevent (p19 / please-01
-                                            :doclink "s33-p")
-                             :subevent (m4 / meet-02
-                                           :doclink "s33-m")
-                             :ref (g17 / grown-up
-                                       :doclink "s33-g"
-                                       :coref g11))))
+(u5 / utterance
+    :turn1 (u1 / turn
+               :info-source (a / author)
+               :snt0 (s1 / sentence-91
+                         :assert (s35 / see-01
+                                      :doclink "s0-s")
+                         :ref (i1 / i
+                                  :doclink "s0-i"
+                                  :coref a)
+                         :ref (b1 / book
+                                  :doclink "s0-b2")
+                         :contained-by (t1 / time
+                                           :contains (a1 / age-01
+                                                         :doclink "s0-a"))
+                         :ref (p3 / picture
+                                  :doclink "s0-p"))
+               :snt1 (s2 / sentence-91
+                         :ref (i2 / it
+                                  :coref p3)
+                         :assert (p1 / picture
+                                     :doclink "s1-p"
+                                     :assert (s36 / swallow-01
+                                                  :doclink "s1-s")
+                                     :ref (a2 / animal
+                                              :doclink "s1-a")
+                                     :info-source i2))
+               :snt2 (s3 / sentence-91
+                         :assert (c1 / copy-01
+                                     :doclink "s2-c")
+                         :ref (p2 / picture
+                                  :doclink "s2-p"
+                                  :coref p3)
+                         :ref (t3 / thing
+                                  :doclink "s2-t2"))
+               :snt3 (s4 / sentence-91
+                         :assert (s38 / say-01
+                                      :doclink "s3-s2"
+                                      :assert (g1 / generalization
+                                                  :assert (s37 / swallow-01
+                                                               :doclink "s3-s")
+                                                  :ref (p5 / prey
+                                                           :doclink "s3-p")
+                                                  :ref (b3 / boa
+                                                           :doclink "s3-b")
+                                                  :deny (c2 / chew-01
+                                                            :doclink "s3-c2"))
+                                      :info-source (b2 / book
+                                                       :doclink "s3-b2"
+                                                       :coref b1))
+                         :ref (b4 / book
+                                  :doclink "s3-b2"
+                                  :coref b1))
+               :snt4 (s5 / sentence-91
+                         :assert (g2 / generalization
+                                     :assert (s40 / sleep-01
+                                                  :doclink "s4-s")
+                                     :assert (n1 / need-01
+                                                 :doclink "s4-n")
+                                     :assert (d2 / digest-01
+                                                 :doclink "s4-d")
+                                     :subevent-of g1))
+               :snt5 (s6 / sentence-91
+                         :assert (p4 / ponder-01
+                                     :doclink "s5-p"
+                                     :assert s38
+                                     :before u1))
+               :snt6 (s7 / sentence-91
+                         :assert (s39 / succeed-01
+                                      :doclink "s6-s")
+                         :assert (m1 / make-01
+                                     :doclink "s6-m")
+                         :ref (p6 / picture
+                                  :doclink "s6-p2")
+                         :ref (i4 / i
+                                  :doclink "s6-i"
+                                  :coref a)
+                         :assert (w1 / work-01
+                                     :doclink "s6-w"
+                                     :assert m1
+                                     :after p4))
+               :snt7 (s8 / sentence-91
+                         :ref (p7 / picture
+                                  :doclink "s7-p"
+                                  :coref p6)
+                         :ref (i3 / i
+                                  :doclink "s7-i"
+                                  :coref a))
+               :snt8 (s9 / sentence-91
+                         :assert (l1 / look-02
+                                     :doclink "s8-l")
+                         :assert (s41 / show-01
+                                      :doclink "s8-s"
+                                      :after m1)
+                         :assert (a3 / ask-01
+                                     :doclink "s8-a2"
+                                     :neut (f2 / frighten-01
+                                               :doclink "s8-f")
+                                     :subevent s41)
+                         :ref (i6 / it
+                                  :doclink "s8-i"
+                                  :coref p7)
+                         :ref (i5 / i
+                                  :doclink "s8-i2"
+                                  :coref a)
+                         :ref (g3 / grown-up
+                                  :doclink "s8-g"))
+               :snt9 (s10 / sentence-91
+                          :assert (a4 / answer-01
+                                      :doclink "s9-a"
+                                      :neut (f1 / frighten-01
+                                                :doclink "s9-f")
+                                      :info-source (t2 / they
+                                                       :doclink "s9-t"
+                                                       :ref g3))
+                          :ref t2)
+               :snt10 (s11 / sentence-91
+                           :info-source t2
+                           :neut (f3 / frighten-01
+                                     :doclink "s10-f"
+                                     :coref f1)
+                           :ref (h1 / hat
+                                    :doclink "s10-h")
+                           :request-info (a5 / amr-unknown
+                                             :doclink "s10-a2"))
+               :snt11 (s12 / sentence-91
+                           :deny (p9 / picture-01
+                                     :doclink "s11-p")
+                           :ref (p8 / picture
+                                    :doclink "s11-p2"
+                                    :coref p7)
+                           :ref (h2 / hat
+                                    :doclink "s11-h")
+                           :ref (i7 / i
+                                    :doclink "s11-i"
+                                    :coref a))
+               :snt12 (s13 / sentence-91
+                           :assert (p10 / picture-01
+                                        :doclink "s12-p"
+                                        :assert (d1 / digest-01
+                                                    :doclink "s12-d")
+                                        :ref (e1 / elephant
+                                                 :doclink "s12-e")
+                                        :ref (b5 / boa
+                                                 :doclink "s12-b2")
+                                        :info-source (i8 / it
+                                                         :doclink "s12-i"
+                                                         :coref p8))
+                           :ref i8)
+               :snt13 (s14 / sentence-91
+                           :deny (u2 / understand-01
+                                     :doclink "s13-u"
+                                     :after a4)
+                           :ref (g4 / grown-up
+                                    :doclink "s13-g")
+                           :ref (i9 / it
+                                    :doclink "s13-i2"
+                                    :coref i8)
+                           :assert (d3 / draw-01
+                                       :doclink "s13-d"
+                                       :after u2)
+                           :assert-prob (s42 / see-01
+                                             :doclink "s13-s")
+                           :ref (p12 / picture
+                                     :doclink "s13-p2"))
+               :snt14 (s15 / sentence-91
+                           :assert (g5 / generalization
+                                       :ref (t4 / they
+                                                :doclink "s14-t"
+                                                :coref g4)
+                                       :assert (e2 / explain-01
+                                                   :doclink "s14-e")
+                                       :assert (n2 / need-01
+                                                   :doclink "s14-n")))
+               :snt15 (s16 / sentence-91
+                           :assert (l2 / look-02
+                                       :doclink "s15-l")
+                           :ref (p11 / picture
+                                     :doclink "s15-p"
+                                     :coref p12)
+                           :assert (r1 / respond-01
+                                       :doclink "s15-r")
+                           :assert (a6 / advise-01
+                                       :doclink "s15-a"
+                                       :subevent-of r1
+                                       :deont-pos (l3 / lay-01
+                                                      :doclink "s15-l2")
+                                       :deont-pos (d4 / devote-01
+                                                      :doclink "s15-d3")))
+               :snt16 (s17 / sentence-91
+                           :assert (g6 / give-up-07
+                                       :doclink "s16-g"
+                                       :time-of (t5 / time
+                                                    :coref t1)
+                                       :cause a6)
+                           :neut (c4 / career
+                                     :doclink "s16-c")
+                           :ref (i10 / i
+                                     :doclink "s16-i"
+                                     :coref a))
+               :snt17 (s18 / sentence-91
+                           :assert (d5 / dishearten-01
+                                       :doclink "s17-d"
+                                       :subevent g6)
+                           :assert (f4 / fail-01
+                                       :doclink "s17-f"
+                                       :before u1))
+               :snt18 (s19 / sentence-91
+                           :assert (g7 / generalization
+                                       :deny (u3 / understand-01
+                                                 :doclink "s18-u")
+                                       :ref (g9 / grown-up
+                                                :doclink "s18-g")
+                                       :ref (a7 / anything
+                                                :doclink "s18-a3"))
+                           :assert (g8 / generlization
+                                       :ref (c3 / child
+                                                :doclink "s18-c")
+                                       :ref g9
+                                       :neces-pos (e3 / explain-01
+                                                      :doclink "s18-e")
+                                       :assert (t6 / tiresome
+                                                   :doclink "s18-t")))
+               :snt19 (s20 / sentence-91
+                           :assert (c6 / choose-01
+                                       :doclink "s19-c"
+                                       :cause g6)
+                           :assert (l4 / learn-01
+                                       :doclink "s19-l"
+                                       :cause c6
+                                       :neut (p13 / pilot-01
+                                                  :doclink "s19-p2"
+                                                  :ref (a8 / airplane
+                                                           :doclink "s19-a3")))
+                           :ref (i11 / i
+                                     :doclink "s19-i"
+                                     :coref a))
+               :snt20 (s21 / sentence-91
+                           :assert (f5 / fly-01
+                                       :doclink "s20-f"
+                                       :subevent (u4 / useful-05
+                                                     :doclink "s20-u"))
+                           :ref (i12 / i
+                                     :doclink "s20-i"
+                                     :coref a)
+                           :ref (p14 / part
+                                     :doclink "s20-p2"))
+               :snt21 (s22 / sentence-91
+                           :assert-possible (d6 / distinguish-01
+                                                :doclink "s21-d")
+                           :ref (i13 / i
+                                     :doclink "s21-i"
+                                     :coref a)
+                           :ref (c5 / country
+                                    :doclink "s21-c")
+                           :ref (s43 / state
+                                     :doclink "s21-s"))
+               :snt22 (s23 / sentence-91
+                           :assert (g10 / generalization
+                                        :condition (l5 / lost
+                                                       :doclink "s22-l")
+                                        :assert (v1 / value-02
+                                                    :doclink "s22-v")))
+               :snt23 (s24 / sentence-91
+                           :assert (e4 / encounter-01
+                                       :doclink "s23-e")
+                           :ref (i14 / i
+                                     :doclink "s23-i"
+                                     :coref a)
+                           :ref (p15 / person
+                                     :doclink "s23-p"))
+               :snt24 (s25 / sentence-91
+                           :assert (l6 / live-01
+                                       :doclink "s24-l")
+                           :ref (i16 / i
+                                     :doclink "s24-i"
+                                     :coref a)
+                           :ref (g11 / grown-up
+                                     :doclink "s24-g"))
+               :snt25 (s26 / sentence-91
+                           :assert (s44 / see-01
+                                        :doclink "s25-s"
+                                        :subevent-of l6)
+                           :ref (t7 / they
+                                    :doclink "s25-t"
+                                    :coref g11)
+                           :ref (i15 / i
+                                     :doclink "s25-i"
+                                     :coref i16))
+               :snt26 (s27 / sentence-91
+                           :deny (i17 / improve-01
+                                      :doclink "s26-i")
+                           :ref (i18 / i
+                                     :doclink "s26-i2")
+                           :ref (t8 / they
+                                    :doclink "s26-t2"
+                                    :coref g11)
+                           :ref (t9 / that
+                                    :doclink "s26-t"
+                                    :coref s44))
+               :snt27 (s28 / sentence-91
+                           :assert (g12 / generalization
+                                        :condition (m3 / meet-02
+                                                       :doclink "s27-m")
+                                        :assert (t10 / try-01
+                                                     :doclink "s27-t")
+                                        :assert (e5 / experiment-01
+                                                    :doclink "s27-e"
+                                                    :subevent (s45 / show-01
+                                                                   :doclink "s27-s"))
+                                        :ref (p16 / person
+                                                  :doclink "s27-p"))
+                           :ref (i19 / i
+                                     :doclink "s27-i"
+                                     :coref a)
+                           :ref (t11 / they
+                                     :doclink "s27-t3"
+                                     :coref g11)
+                           :ref (p17 / picture
+                                     :doclink "s27-p2"
+                                     :coref p11)
+                           :assert (k1 / keep-01
+                                       :doclink "s27-k"))
+               :snt28 (s29 / sentence-91
+                           :assert (t12 / try-01
+                                        :doclink "s28-t"
+                                        :coref t10
+                                        :result (f6 / find-out-03
+                                                    :doclink "s28-f"))
+                           :ref (i20 / i
+                                     :doclink "s28-i"
+                                     :coref a))
+               :snt29 (s30 / sentence-91
+                           :assert (s46 / say-01
+                                        :doclink "s29-s"
+                                        :assert (i21 / identity-91)
+                                        :subevent-of g12
+                                        :ref (o1 / or
+                                                 :doclink "s29-o"
+                                                 :coref p16)))
+               :snt30 (s31 / sentence-91
+                           :assert (g13 / generalization
+                                        :subevent-of g12
+                                        :deny (t13 / talk-01
+                                                   :doclink "s30-t"
+                                                   :info-source (i22 / i
+                                                                     :doclink "s30-i"
+                                                                     :coref a)
+                                                   :ref (o2 / or
+                                                            :doclink "s30-o"))
+                                        :ref (p18 / person
+                                                  :doclink "s30-p"
+                                                  :coref p16))
+                           :ref i22)
+               :snt31 (s32 / sentence-91
+                           :assert (g14 / generalization
+                                        :subevent-of g12
+                                        :assert (b6 / bring-01
+                                                    :doclink "s31-b"))
+                           :ref (h3 / he
+                                    :doclink "s31-h"
+                                    :coref p18)
+                           :ref (i23 / i
+                                     :doclink "s31-i"
+                                     :coref a))
+               :snt32 (s33 / sentence-91
+                           :assert (g15 / generalization
+                                        :assert (t14 / talk-01
+                                                     :doclink "s32-t")
+                                        :subevent-of g12
+                                        :ref (h4 / he
+                                                 :doclink "s32-h"
+                                                 :coref p18))
+                           :ref (i24 / i
+                                     :doclink "s32-i"
+                                     :coref a))
+               :snt33 (s34 / sentence-91
+                           :ref (m2 / man
+                                    :doclink "s33-m2"
+                                    :coref a)
+                           :assert (g16 / generalization
+                                        :subevent (p19 / please-01
+                                                       :doclink "s33-p")
+                                        :subevent (m4 / meet-02
+                                                      :doclink "s33-m")
+                                        :ref (g17 / grown-up
+                                                  :doclink "s33-g"
+                                                  :coref g11)))))
 
 # ::id lpp_1943.2 ::date 2012-06-07T17:06:20 ::annotator ISI-AMR-05 ::preferred
 # ::snt Once when I was six years old I saw a magnificent picture in a book , called True Stories from Nature , about the primeval forest .

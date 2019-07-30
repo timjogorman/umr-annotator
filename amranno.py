@@ -28,15 +28,18 @@ class AnnotationAMR:
 
         new_amr = current_amr_in_triples + [penman.Triple(head, relation, new_variable), penman.Triple(new_variable, "instance", concept)]
         temp_amr = self.codec.triples_to_graph(new_amr, top=current_top)
+        str(temp_amr)
         self.amr = temp_amr
         self.allvariables = [str(x.source) for x in self.amr.anchored_triples() if x.relation =='instance']
         return new_variable
+
     def rename_instance(self, old_head, concept):
         current_amr_in_triples = self.amr.anchored_triples()
         current_top = self.amr.top
-
-        new_amr = [x for x in current_amr_in_triples if not x.relation == 'instance' and x.source=='old_head'] + [penman.Triple(old_head, "instance", concept)]
-
+        new_amr = [x for x in current_amr_in_triples if not (x.relation == 'instance' and x.source== old_head)] + [penman.Triple(old_head, "instance", concept)]
+        print(new_amr, current_top)
+        print(current_amr_in_triples)
+        input("###")
         temp_amr = self.codec.triples_to_graph(new_amr, top=current_top)
         str(temp_amr)
         self.amr = temp_amr
@@ -111,15 +114,17 @@ class AnnotationAMR:
                 newtopvariable = concept
                 self.changetop(newtopvariable)
         elif len(update_string.strip().split(" ")) == 3:
-
             head, relation, concept = update_string.strip().split(" ")    
+
             if head == "replace":
+
                 varname = relation
-                try:
-                    self.rename_instance(varname,  concept)
-                except:
-                    return False
-                return True
+                print(head, relation, concept, "??")
+                #try:
+                self.rename_instance(varname,  concept)
+                #except:
+                #    return False
+                #return True
             elif concept in self.allvariables:
                 try:
                     self.add_reentrancy(head, relation, concept)
@@ -139,6 +144,8 @@ class AnnotationAMR:
                     self.amr = penman.decode(tempbox)
                     return False
                 return True
+            elif concept.strip(" ").startswith('"') and concept.strip(" ").endswith('"'):
+                return self.add_string(head, relation, concept)        
             
             else:
                 try:
