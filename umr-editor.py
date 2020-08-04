@@ -46,6 +46,7 @@ class UMRfile:
             self.amrids[len(self.amrs)] = inamr
             self.sentences[len(self.amrs)] = lastsent
             self.amrs.append(rawamr)
+        
     def push(self):
         self.stack.append(str(self.its_amr.amr))
         while len(self.stack) > 20:
@@ -81,7 +82,7 @@ class UMRfile:
                 layouts.append([sg.Text(str(amrid)+". "+self.sentences[amrid]+"\n"+str(a),key="SUB"+str(amrid), font=("Times",12,""),text_color="#a5bbb2")])
 
         amr_box = sg.Column(layouts,
-        size=(850, 660),
+        size=(650, 560),
         scrollable=True,
         key="_RAWAMR_",
         visible=True)
@@ -91,18 +92,20 @@ def annotateUMR(rawfile, filename):
 
     umrf = UMRfile(rawfile, filename)
     amr_box, layouts = umrf.returnColumns()
-    sgt = [[sg.Text('', size=(750,800), key='_OUTPUT_')]]
+    sgt = [[sg.Multiline('', size=(550,530), key='_OUTPUT_')]]
     display_box = sg.Column(sgt,
-        size=(550, 700),
-        scrollable=True)
+        size=(550, 510),
+        scrollable=True, key="display")
     layout = [[amr_box, display_box],
               [sg.Input(key='_IN_')],
               [sg.Text('', size=(10,1), key='_STATUS_')],
               [sg.Button('Show', bind_return_key=True), sg.Button('Exit')]]
 
-    window = sg.Window('Make an AMR', layout, background_color='#FFFFFF', size=(1250,850), resizable=True).Finalize()
+    window = sg.Window('Make an AMR', layout, background_color='#FFFFFF', size=(1250,650), resizable=True).Finalize()
     umrf.its_amr = AnnotationAMR(umrf.currentumr(), isumr=True)
-    window.Element('_OUTPUT_').Update(str(umrf.its_amr.amr))
+    #window.Element('_OUTPUT_').Update(str(umrf.its_amr.amr))
+    window['_OUTPUT_'](str(umrf.its_amr.amr))
+    print(window['_OUTPUT_'].Get())
     while True:  # Event Loop
         amr_box, layouts = umrf.returnColumns()
         for lid, l in enumerate(layouts):
@@ -178,9 +181,13 @@ if __name__ == "__main__":
                 for q in range(rawtext.count("::id")):
                     rawtext += "   :snt"+str(q)+"(s"+str(q+1)+" / sentence-91)\n"
                 rawtext += "))\n\n"
+
             elif style == 'unm':
                 rawtext += "# ::umr \n(t / document :op1 (t1 / turn  :modal-source (a / author)"
                 for q in range(rawtext.count("::id")):
                     rawtext += "   :snt"+str(q)+"(s"+str(q+1)+" / sentence-author :coref a)\n"
                 rawtext += "))\n\n"
     annotateUMR(rawtext, fn)
+
+
+
